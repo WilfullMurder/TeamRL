@@ -5,11 +5,14 @@ import java.util.Comparator;
 public class BeanComparator implements Comparator<Object> {
     private String getter;
 
+    /**
+     * hsfdjkhfluisdhkcuishndfluikh
+     * @param field the desired field to sort by
+     */
     public BeanComparator(String field)
     {
         this.getter = "get" + field.substring(0,1).toUpperCase() + field.substring(1);
     }
-
 
     @Override
     public int compare(Object o1, Object o2) {

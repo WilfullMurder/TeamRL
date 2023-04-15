@@ -1,6 +1,7 @@
 package com.example.teamRl;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 //auth:JacobFarrow(20007972)
 
@@ -9,7 +10,7 @@ import java.util.Random;
  * Data should be generated manually via user input in production
  */
 public class DataGenerator {
-    private final String[] GIVEN_NAMES = new String[] {"Adrian", "Akim","Amy", "Amirah", "Alice", "Alicia", "Andre",
+    private final String[] FORENAMES = new String[] {"Adrian", "Akim","Amy", "Amirah", "Alice", "Alicia", "Andre",
             "Babette", "Benedict", "Bethany", "Bjorn", "Bruno", "Bryoni", "Caitrionagh","Carlos", "Camelia", "Celine", "Chen","Christian",
             "Daena","Daniel", "Daphne", "Delphinah","Diego","Dimitri", "Eduardo", "Ealasidde", "Ekatrina","Elias", "Eleanor","Emilio",
             "Fabiannah","Fang Hua","Fanny","Finn","Franc","Frobisher", "Gabriella","Gail", "Giovanni","Giselle", "Habibah","Harmony","Haruto","Hippolyta", "Hudson",
@@ -49,17 +50,18 @@ public class DataGenerator {
 
         for(int i=0; i<count; i++)
         {
+            boolean staffChance = random.nextInt(10) < 1; //1:10
+
+            //generate user attributes of random values
             String surname = generateSurname();
-            String forename = generateGivenName();
+            String forename = generateForename();
             String email = generateEmail(surname, forename);
             String startY = generateStartYear();
-            boolean staffChance = random.nextInt(10) < 1;
             String ub = generateUB(staffChance, startY);
             String endY = generateEndYear(staffChance, startY);
 
             User u = new User(surname,forename,ub,email,generateDOB(), startY, endY);
-            //here we need to generate all the random info for the user class
-            //using the private gen functions
+
             if(!userList.contains(u))
             {
                 //user is not a duplicate
@@ -67,22 +69,24 @@ public class DataGenerator {
             }
         }
 
-        //Collections.sort(userList);
+        Collections.sort(userList, new BeanComparator("surname"));
         return userList;
     }
 
-    private String generateEndYear(boolean staffChance, String startYear) {
-        String e = "";
-        if(!staffChance)
-        {
-            e = Integer.toString(Integer.valueOf(startYear) + 3);
-        }
-        return e;
+
+    public ArrayList<Activity> generateActivities(int count)
+    {
+        ArrayList<Activity> activities = new ArrayList<>();
+
+
+        return activities;
     }
 
-    private String generateGivenName()
+
+
+    private String generateForename()
     {
-        return this.GIVEN_NAMES[random.nextInt(this.GIVEN_NAMES.length)];
+        return this.FORENAMES[random.nextInt(this.FORENAMES.length)];
     }
     private String generateSurname()
     {
@@ -105,7 +109,7 @@ public class DataGenerator {
         int loopLength = UB_MAX_LENGTH;
         if(staff){
             loopLength-=3;
-            s="900";
+            s="900"; //MAGIC NUMBER! all staff id start with 900
         }
         else{
             loopLength-=2;
@@ -173,5 +177,14 @@ public class DataGenerator {
         s+= day + "/" + month + "/" + year;
         return s;
 
+    }
+
+    private String generateEndYear(boolean staffChance, String startYear) {
+        String e = "";
+        if(!staffChance)
+        {
+            e = Integer.toString(Integer.valueOf(startYear) + 3);
+        }
+        return e;
     }
 }

@@ -1,9 +1,21 @@
 //lead auth:JacobFarrow(20007972)
 package com.example.teamRl;
-import java.util.ArrayList;
-
 //auth:HasanaynDad(22007018)
+
+/**
+ * User class is a java bean that acts as a POJO for data storage
+ */
 public class User {
+
+    //sort out the password
+        //add to constructor
+        //generate encryption
+        //change password method
+
+    //sort out methods
+        //login //logout
+        //sign up //join activity
+        //Leave activity //view activity
 
     private String surname;
     private String forename;
@@ -13,21 +25,20 @@ public class User {
     private String startYear;
     private String endYear;
 
+    private String password;
+
     private Admin admin;
     private SuperUser superUser;
     private boolean adminFlag;
     private boolean superFlag;
 
     public User() {
-
+        //java beans must have a default constructor
     }
 
-    public User(String s, String f, String u, String e, String d) {
-        this.surname = s;
-        this.forename = f;
-        this.uobNumber = u;
+    public User(String e, String p) {
         this.email = e;
-        this.DOB = d;
+        //check password and load User
     }
 
     /**
@@ -52,6 +63,8 @@ public class User {
         checkForStaff();
     }
 
+    //we might want to get rid of this check
+    //and/or write a flag to file
     private void checkForStaff() {
         String s = this.uobNumber.substring(0, 2);
         if (s.equals("900") && endYear.equals("")) {
@@ -75,6 +88,16 @@ public class User {
 
     public void setForename(String forename) {
         this.forename = forename;
+    }
+
+    public String getUobNumber()
+    {
+        return this.uobNumber;
+    }
+
+    public void setUobNumber(String ub)
+    {
+        this.uobNumber = ub;
     }
 
     public String getEmail() {
@@ -121,6 +144,9 @@ public class User {
         return superUser;
     }
 
+    public void setSuperUser(SuperUser superUser) {
+        this.superUser = superUser;
+    }
 
     //we might not need these flags but, we might not want to save the Admin/Super class into the user class data??
     public boolean getAdminFlag() {
@@ -143,12 +169,11 @@ public class User {
 
     /**
      * converts the class into JSON format
-     *
      * @return formatted JSON string
      */
     public String toJSON() {
-        return String.format("\"%s\"", surname) +
-                " :{" + "\"forename\": " + String.format("\"%s\"", forename) +
+        return  "{\"surname\":" + String.format("\"%s\"", surname) +
+                ", \"forename\": " + String.format("\"%s\"", forename) +
                 ", \"uobNumber\":" + String.format("\"%s\"", uobNumber) +
                 ", \"email\":" + String.format("\"%s\"", email) +
                 ", \"DOB\":" + String.format("\"%s\"", DOB) +
@@ -160,7 +185,6 @@ public class User {
 
     /**
      * converts the class into csv format
-     *
      * @return formatted csv string
      */
     public String toCSV() {
@@ -176,73 +200,11 @@ public class User {
         //message String variable?
     }
 
-
-    private static class Admin {
-        //auth:SadiyahZafhar(UB:22001015)
-        private ArrayList<User> members;
-        private Activity myActivity;
-
-        public Admin() {
-            members = new ArrayList<>();
-        }
-
-        public ArrayList<User> getMembers() {
-            return this.members;
-        }
-
-        public User getMember(int index) {
-            return this.members.get(index);
-        }
-
-        public void addMember(User newMember) {
-            this.members.add(newMember);
-        }
-
-        public Activity getMyActivity() {
-            return myActivity;
-        }
-
-        public void setMyActivity(Activity a) {
-            myActivity = a;
-        }
+    public String getPassword() {
+        return password;
     }
 
-    private static class SuperUser {
-        //auth:AbuMughal(22036538)
-        private ArrayList<User> adminList;
-        private ArrayList<Activity> activityList;
-
-        public SuperUser() {
-        }
-
-        public ArrayList<User> getAdminList() {
-            return this.adminList;
-        }
-
-        public User getAdmin(int index) {
-            return this.adminList.get(index);
-        }
-
-        public void addNewAdmin(User u) {
-            //We can make this private and call from grantAdminRights?
-            if (u.getAdmin() != null && !this.adminList.contains(u)) {
-                this.adminList.add(u);
-            }
-        }
-
-        public void removeAdmin(User u) {
-            if (u.getAdmin() != null && this.adminList.contains(u)) {
-                this.adminList.remove(u);
-            }
-        }
-
-        public void grantAdminRights(User u) {
-            //We can make this private and call from addNewAdmin?
-            if (u.getAdmin() == null) {
-                //load admin info
-                u.setAdmin(new Admin());
-                addNewAdmin(u);
-            }
-        }
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

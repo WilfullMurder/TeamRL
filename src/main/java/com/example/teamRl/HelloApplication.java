@@ -18,6 +18,25 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+
+        DataGenerator DG = new DataGenerator();
+        User u = new User();
+        Admin a = new Admin();
+        Activity soc = new Activity();
+        a.setMembers(DG.generateUserData(30));
+        a.setMyActivity(soc);
+        System.out.println(a.toString());
+        u.setAdmin(a);
+//        WriteComponent WC = new WriteComponent();
+
+//        WC.writeUserDataToJSONPretty("Users.txt", "main", DG.generateUserData(30));
+//        ReadComponent RC = new ReadComponent();
+//        ArrayList<User> users = RC.readUserDataFromFile("Users.txt", "main");
+//
+//        for(int i=0; i<users.size(); i++)
+//        {
+//            System.out.println(users.get(i).toJSON());
+//        }
+       //launch();
     }
 }

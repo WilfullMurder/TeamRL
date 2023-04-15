@@ -1,14 +1,23 @@
 package com.example.teamRl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class WriteComponent {
-    private File createFile(String filePath, String keyFolder)
+
+    /**
+     * create a new file if the file in question does not exist
+     * @param fileName target file
+     * @param keyFolder target folder
+     * @return the file in question
+     */
+    private File createFile(String fileName, String keyFolder)
     {
-        String path = getFilePath(filePath, keyFolder);
+        String path = getFilePath(fileName, keyFolder);
         File f = new File(path);
 
         try{
@@ -18,7 +27,7 @@ public class WriteComponent {
                 System.out.println("File " + f.getName() + "created"); //change to log
             }
             else{
-                System.out.println("File " + f.getName() + "already exists. File will be overwritten"); //change to log
+                System.out.println("File " + f.getName() + " already exists. File will be overwritten"); //change to log
             }
         }catch(IOException e)
         {
@@ -28,20 +37,26 @@ public class WriteComponent {
     }
 
 
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @param data ArrayList of User class
+     */
     public void writeUserDataToJSON(String filename, String keyFolder, ArrayList<User> data)
     {
         File f = createFile(filename, keyFolder);
         try{
             FileOutputStream fos = new FileOutputStream(f);
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
-            bw.write("{" );
+            bw.write("[" );
             for(int i =0; i< data.size(); i++)
             {
                 bw.write(data.get(i).toJSON());
                 if(i<data.size()-1){bw.write(",");}
                 bw.newLine();
             }
-            bw.write("}");
+            bw.write("]");
             bw.close();
         } catch (IOException e)
         {
@@ -49,6 +64,56 @@ public class WriteComponent {
         }
     }
 
+    public void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
+    {
+        File target = createFile(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //work on this
+    public void writeAdminDataToJSON(String filename, String keyFolder, ArrayList<User> data)
+    {
+        File f = createFile(filename, keyFolder);
+        try{
+            FileOutputStream fos = new FileOutputStream(f);
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+            bw.write("[" );
+            for(int i =0; i< data.size(); i++)
+            {
+                bw.write(data.get(i).toJSON());
+                if(i<data.size()-1){bw.write(",");}
+                bw.newLine();
+            }
+            bw.write("]");
+            bw.close();
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void writeAdminDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
+    {
+        File target = createFile(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @param data ArrayList of User class
+     */
     public void writeUserDataToCSV(String filename, String keyFolder, ArrayList<User> data)
     {
         File f = createFile(filename, keyFolder);
@@ -69,6 +134,12 @@ public class WriteComponent {
         }
     }
 
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @return the path of the target file
+     */
     private String getFilePath(String filename, String keyFolder)
     {
         Path p = Paths.get("");
