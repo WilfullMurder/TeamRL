@@ -3,7 +3,7 @@ package com.example.teamRl;
 //auth:HasanaynDad(22007018)
 
 /**
- * User class is a java bean that acts as a POJO for data storage
+ * User class acts as a POJO for data storage
  */
 public class User {
 
@@ -190,7 +190,11 @@ public class User {
     public String toCSV() {
         return surname +
                 "," + forename +
-                "," + uobNumber;
+                "," + uobNumber +
+                "," + email +
+                "," + DOB +
+                "," + startYear +
+                "," + endYear;
     }
 
     public void requestAdminRights() {

@@ -32,7 +32,9 @@ public class DataGenerator {
 
     private final String[] EXECUTIVE_ROLES = new String[] {"President","Vice-President","Treasurer", "Secretary", "Member"};
 
-    private final String LOREM_IPSUM = "";
+    private final String LOREM_IPSUM_SHORT = "";
+    private final String LOREM_IPSUM_MEDIUM = "";
+    private final String LOREM_IPSUM_LONG = "";
 
     private final String MAIL_SUFFIX = "@fakeEmail.ac.uk";
     private final int UB_MAX_LENGTH = 8;
@@ -186,5 +188,10 @@ public class DataGenerator {
             e = Integer.toString(Integer.valueOf(startYear) + 3);
         }
         return e;
+    }
+
+    private String generatePassword()
+    {
+        return "";
     }
 }
