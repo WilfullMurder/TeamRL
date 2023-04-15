@@ -11,45 +11,13 @@ public class WriteComponent {
 
 
     /**
-     *
+     * !DEPRECATED! Use writeUserDataToJSON or writeUserDataToJSONPretty
      * @param filename name of target file
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public void writeUserDataToJSON(String filename, String keyFolder, ArrayList<User> data)
-    {
-        File f = createFile(filename, keyFolder);
-        try{
-            FileOutputStream fos = new FileOutputStream(f);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
-            bw.write("[" );
-            for(int i =0; i< data.size(); i++)
-            {
-                bw.write(data.get(i).toJSON());
-                if(i<data.size()-1){bw.write(",");}
-                bw.newLine();
-            }
-            bw.write("]");
-            bw.close();
-        } catch (IOException e)
-        {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
-    {
-        File target = createFile(filename, keyFolder);
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    //work on this
-    public void writeAdminDataToJSON(String filename, String keyFolder, ArrayList<User> data)
+    @Deprecated
+    public void writeUserDataToFile(String filename, String keyFolder, ArrayList<User> data)
     {
         File f = createFile(filename, keyFolder);
         try{
@@ -76,6 +44,38 @@ public class WriteComponent {
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
+    public void writeUserDataToJSON(String filename, String keyFolder, ArrayList<User> data)
+    {
+        File target = createFile(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @param data ArrayList of User class
+     */
+    public void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
+    {
+        File target = createFile(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @param data ArrayList of User class
+     */
     public void writeUserDataToCSV(String filename, String keyFolder, ArrayList<User> data)
     {
         File f = createFile(filename, keyFolder);
@@ -95,6 +95,30 @@ public class WriteComponent {
             throw new RuntimeException(e);
         }
     }
+
+    //work on this
+    public void writeAdminDataToJSON(String filename, String keyFolder, ArrayList<User> data)
+    {
+        File f = createFile(filename, keyFolder);
+        try{
+            FileOutputStream fos = new FileOutputStream(f);
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+            bw.write("[" );
+            for(int i =0; i< data.size(); i++)
+            {
+                bw.write(data.get(i).toJSON());
+                if(i<data.size()-1){bw.write(",");}
+                bw.newLine();
+            }
+            bw.write("]");
+            bw.close();
+        } catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
+
 
     public void writeAdminDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
     {

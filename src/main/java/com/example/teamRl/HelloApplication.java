@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class HelloApplication extends Application {
     @Override
@@ -18,7 +19,13 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+        ReadComponent RC = new ReadComponent();
+        ArrayList<User> users = RC.readUserDataFromJSONFile("Users.txt", "main");
 
-       launch();
+        for(int i = 0; i<users.size(); i++)
+        {
+            System.out.println(users.get(i).toJSON());
+        }
+        //launch();
     }
 }

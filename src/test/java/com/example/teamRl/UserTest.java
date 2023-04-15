@@ -8,34 +8,32 @@ class UserTest {
     /**
      * Methods under test:
      *
-     * <ul>
-     *   <li>{@link User#User()}
-     *   <li>{@link User#setAdmin(Admin)}
-     *   <li>{@link User#setAdminFlag(boolean)}
-     *   <li>{@link User#setDOB(String)}
-     *   <li>{@link User#setEmail(String)}
-     *   <li>{@link User#setEndYear(String)}
-     *   <li>{@link User#setForename(String)}
-     *   <li>{@link User#setPassword(String)}
-     *   <li>{@link User#setStartYear(String)}
-     *   <li>{@link User#setSuperFlag(boolean)}
-     *   <li>{@link User#setSuperUser(SuperUser)}
-     *   <li>{@link User#setSurname(String)}
-     *   <li>{@link User#setUobNumber(String)}
-     *   <li>{@link User#requestAdminRights()}
-     *   <li>{@link User#getAdmin()}
-     *   <li>{@link User#getAdminFlag()}
-     *   <li>{@link User#getDOB()}
-     *   <li>{@link User#getEmail()}
-     *   <li>{@link User#getEndYear()}
-     *   <li>{@link User#getForename()}
-     *   <li>{@link User#getPassword()}
-     *   <li>{@link User#getStartYear()}
-     *   <li>{@link User#getSuperFlag()}
-     *   <li>{@link User#getSuperUser()}
-     *   <li>{@link User#getSurname()}
-     *   <li>{@link User#getUobNumber()}
-     * </ul>
+     *   {@link User#User()}
+     *   {@link User#setAdmin(Admin)}
+     *   {@link User#setAdminFlag(boolean)}
+     *   {@link User#setDOB(String)}
+     *   {@link User#setEmail(String)}
+     *   {@link User#setEndYear(String)}
+     *   {@link User#setForename(String)}
+     *   {@link User#setPassword(String)}
+     *   {@link User#setStartYear(String)}
+     *   {@link User#setSuperFlag(boolean)}
+     *   {@link User#setSuperUser(SuperUser)}
+     *   {@link User#setSurname(String)}
+     *   {@link User#setUobNumber(String)}
+     *   {@link User#requestAdminRights()}
+     *   {@link User#getAdmin()}
+     *   {@link User#getAdminFlag()}
+     *   {@link User#getDOB()}
+     *   {@link User#getEmail()}
+     *   {@link User#getEndYear()}
+     *   {@link User#getForename()}
+     *   {@link User#getPassword()}
+     *   {@link User#getStartYear()}
+     *   {@link User#getSuperFlag()}
+     *   {@link User#getSuperUser()}
+     *   {@link User#getSurname()}
+     *   {@link User#getUobNumber()}
      */
     @Test
     void testConstructor() {
@@ -72,34 +70,32 @@ class UserTest {
     /**
      * Methods under test:
      *
-     * <ul>
-     *   <li>{@link User#User(String, String)}
-     *   <li>{@link User#setAdmin(Admin)}
-     *   <li>{@link User#setAdminFlag(boolean)}
-     *   <li>{@link User#setDOB(String)}
-     *   <li>{@link User#setEmail(String)}
-     *   <li>{@link User#setEndYear(String)}
-     *   <li>{@link User#setForename(String)}
-     *   <li>{@link User#setPassword(String)}
-     *   <li>{@link User#setStartYear(String)}
-     *   <li>{@link User#setSuperFlag(boolean)}
-     *   <li>{@link User#setSuperUser(SuperUser)}
-     *   <li>{@link User#setSurname(String)}
-     *   <li>{@link User#setUobNumber(String)}
-     *   <li>{@link User#requestAdminRights()}
-     *   <li>{@link User#getAdmin()}
-     *   <li>{@link User#getAdminFlag()}
-     *   <li>{@link User#getDOB()}
-     *   <li>{@link User#getEmail()}
-     *   <li>{@link User#getEndYear()}
-     *   <li>{@link User#getForename()}
-     *   <li>{@link User#getPassword()}
-     *   <li>{@link User#getStartYear()}
-     *   <li>{@link User#getSuperFlag()}
-     *   <li>{@link User#getSuperUser()}
-     *   <li>{@link User#getSurname()}
-     *   <li>{@link User#getUobNumber()}
-     * </ul>
+     *   {@link User#User(String, String)}
+     *   {@link User#setAdmin(Admin)}
+     *   {@link User#setAdminFlag(boolean)}
+     *   {@link User#setDOB(String)}
+     *   {@link User#setEmail(String)}
+     *   {@link User#setEndYear(String)}
+     *   {@link User#setForename(String)}
+     *   {@link User#setPassword(String)}
+     *   {@link User#setStartYear(String)}
+     *   {@link User#setSuperFlag(boolean)}
+     *   {@link User#setSuperUser(SuperUser)}
+     *   {@link User#setSurname(String)}
+     *   {@link User#setUobNumber(String)}
+     *   {@link User#requestAdminRights()}
+     *   {@link User#getAdmin()}
+     *   {@link User#getAdminFlag()}
+     *   {@link User#getDOB()}
+     *   {@link User#getEmail()}
+     *   {@link User#getEndYear()}
+     *   {@link User#getForename()}
+     *   {@link User#getPassword()}
+     *   {@link User#getStartYear()}
+     *   {@link User#getSuperFlag()}
+     *   {@link User#getSuperUser()}
+     *   {@link User#getSurname()}
+     *   {@link User#getUobNumber()}
      */
     @Test
     void testConstructor2() {

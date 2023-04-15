@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class ReadComponent {
 
-    public ArrayList<User> readUserDataFromFile(String filename, String keyFolder)
+    public ArrayList<User> readUserDataFromJSONFile(String filename, String keyFolder)
     {
         ArrayList<User> data = new ArrayList<>();
 
@@ -19,8 +19,7 @@ public class ReadComponent {
 
         ObjectMapper mapper = new ObjectMapper();
         try {
-            data = mapper.readValue(new File(path), new TypeReference<ArrayList<User>>() {
-            });
+            data = mapper.readValue(new File(path), new TypeReference<ArrayList<User>>(){});
         }catch(IOException e)
         {
             throw new RuntimeException(e);
@@ -30,8 +29,10 @@ public class ReadComponent {
 
 
 
+
     private String getFilePath(String filename, String keyFolder)
     {
+        //this probs needs moving out if read and write both use it
         Path p = Paths.get("");
         String s = p.toAbsolutePath().toString();
         s+= "\\src\\";

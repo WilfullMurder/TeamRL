@@ -1,5 +1,6 @@
 package com.example.teamRl;
 
-// activity class acts is a POJO for activity data
+// activity class is a POJO for activity data
 public class Activity {
+
 }

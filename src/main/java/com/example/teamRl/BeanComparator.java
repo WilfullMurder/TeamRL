@@ -6,7 +6,6 @@ public class BeanComparator implements Comparator<Object> {
     private String getter;
 
     /**
-     * hsfdjkhfluisdhkcuishndfluikh
      * @param field the desired field to sort by
      */
     public BeanComparator(String field)

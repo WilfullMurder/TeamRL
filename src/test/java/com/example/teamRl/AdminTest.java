@@ -14,7 +14,6 @@ class AdminTest {
      * {@link Admin#setMyActivity(Activity)}
      * {@link Admin#getMembers()}
      * {@link Admin#getMyActivity()}
-     *
      */
     @Test
     void testConstructor() {
@@ -23,6 +22,27 @@ class AdminTest {
         actualAdmin.setMembers(userList);
         Activity activity = new Activity();
         actualAdmin.setMyActivity(activity);
+        assertSame(userList, actualAdmin.getMembers());
+        assertSame(activity, actualAdmin.getMyActivity());
+    }
+
+    /**
+     * Methods under test:
+     *   default or parameterless constructor of {@link Admin}
+     *   {@link Admin#setMembers(ArrayList)}
+     *   {@link Admin#setMyActivity(Activity)}
+     *   {@link Admin#toString()}
+     *   {@link Admin#getMembers()}
+     *   {@link Admin#getMyActivity()}
+     */
+    @Test
+    void testConstructor2() {
+        Admin actualAdmin = new Admin();
+        ArrayList<User> userList = new ArrayList<>();
+        actualAdmin.setMembers(userList);
+        Activity activity = new Activity();
+        actualAdmin.setMyActivity(activity);
+        actualAdmin.toString();
         assertSame(userList, actualAdmin.getMembers());
         assertSame(activity, actualAdmin.getMyActivity());
     }
@@ -77,9 +97,49 @@ class AdminTest {
 
         Admin admin = new Admin();
         admin.setMembers(userList);
-        assertNotNull(admin.getMember("Doe"));
         assertEquals(18, admin.getMembers().size());
     }
+
+    /**
+     * Method under test: {@link Admin#getMember(String)}
+     */
+    @Test
+    void testGetMember4() {
+        assertNull((new Admin()).getMember("Doe"));
+    }
+
+    /**
+     * Method under test: {@link Admin#getMember(String)}
+     */
+    @Test
+    void testGetMember5() {
+
+        ArrayList<User> userList = new ArrayList<>();
+        userList.add(new User("aoo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("boo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("coo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("doo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("eoo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("foo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("goo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("hoo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("joo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("loo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("moo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("noo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("ooo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("poo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("qoo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("roo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("soo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
+        userList.add(new User("too", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));;
+
+        Admin admin = new Admin();
+        admin.setMembers(userList);
+        assertNotNull(admin.getMember("foo"));
+    }
+
+
 
 
     /**
