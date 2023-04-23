@@ -7,15 +7,15 @@ import java.io.*;
 import java.util.ArrayList;
 public class ReadComponent {
 
-    public static ArrayList<User> readUserDataFromJSON(String filename, String keyFolder)
+    public static ArrayList<UserInfoComponent> readUserDataFromJSON(String filename, String keyFolder)
     {
-        ArrayList<User> data = new ArrayList<>();
+        ArrayList<UserInfoComponent> data = new ArrayList<>();
 
         String path = FileComponent.getFilePath(filename, keyFolder);
 
         ObjectMapper mapper = new ObjectMapper();
         try {
-            data = mapper.readValue(new File(path), new TypeReference<ArrayList<User>>(){});
+            data = mapper.readValue(new File(path), new TypeReference<ArrayList<UserInfoComponent>>(){});
         }catch(IOException e)
         {
             throw new RuntimeException(e);
@@ -23,9 +23,9 @@ public class ReadComponent {
         return data;
     }
 
-    public static ArrayList<User> readUserDataFromCSV(String filename, String keyFolder)
+    public static ArrayList<UserInfoComponent> readUserDataFromCSV(String filename, String keyFolder)
     {
-        ArrayList<User> data = new ArrayList<>();
+        ArrayList<UserInfoComponent> data = new ArrayList<>();
         String path = FileComponent.getFilePath(filename, keyFolder);
         try {
             BufferedReader br = new BufferedReader(new FileReader(path));

@@ -8,11 +8,39 @@ public class Admin {
     private ArrayList<User> members;
     private Activity myActivity;
 
+    /**
+     * all POJO need a blank, default constructor
+     */
     public Admin() {
-        members = new ArrayList<>();
+
     }
 
+    /**
+     * overidden constructor for creating Admin on the fly
+     * @param data the ArrayList of user data
+     * @param a the activity the Admin belongs to
+     */
+    public Admin(ArrayList<User> data, Activity a)
+    {
+        //how are we tracking activity execs?
+        //in the activity? or in the exec?
+        //activity points us to exec
+        //exec manipulates activity so makes sense to do it in exec?
+        //users might need to track multiple Activities, can they be multiple admin?
+        this.members = data;
+        this.myActivity = a;
+
+    }
+
+    /**
+     * ACCESSOR METHODS
+     * A.K.A - GETTERS & SETTERS
+     */
+
+
+
     public ArrayList<User> getMembers() {
+
         return this.members;
     }
 

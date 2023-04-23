@@ -42,7 +42,7 @@ public class WriteComponent {
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public static void writeUserDataToJSON(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToJSON(String filename, String keyFolder, ArrayList<UserInfoComponent> data)
     {
         File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();
@@ -58,8 +58,9 @@ public class WriteComponent {
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public static void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<UserInfoComponent> data)
     {
+
         File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();
         try {
