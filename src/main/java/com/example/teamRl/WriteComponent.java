@@ -3,8 +3,6 @@ package com.example.teamRl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class WriteComponent {
@@ -17,9 +15,9 @@ public class WriteComponent {
      * @param data ArrayList of User class
      */
     @Deprecated
-    public void writeUserDataToFile(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToFile(String filename, String keyFolder, ArrayList<User> data)
     {
-        File f = createFile(filename, keyFolder);
+        File f = FileComponent.createFile(filename, keyFolder);
         try{
             FileOutputStream fos = new FileOutputStream(f);
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
@@ -44,9 +42,9 @@ public class WriteComponent {
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public void writeUserDataToJSON(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToJSON(String filename, String keyFolder, ArrayList<UserInfoComponent> data)
     {
-        File target = createFile(filename, keyFolder);
+        File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
@@ -60,9 +58,10 @@ public class WriteComponent {
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<UserInfoComponent> data)
     {
-        File target = createFile(filename, keyFolder);
+
+        File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
@@ -76,9 +75,9 @@ public class WriteComponent {
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public void writeUserDataToCSV(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToCSV(String filename, String keyFolder, ArrayList<User> data)
     {
-        File f = createFile(filename, keyFolder);
+        File f = FileComponent.createFile(filename, keyFolder);
         try{
             FileOutputStream fos = new FileOutputStream(f);
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
@@ -97,9 +96,9 @@ public class WriteComponent {
     }
 
     //work on this
-    public void writeAdminDataToJSON(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeAdminDataToJSON(String filename, String keyFolder, ArrayList<User> data)
     {
-        File f = createFile(filename, keyFolder);
+        File f = FileComponent.createFile(filename, keyFolder);
         try{
             FileOutputStream fos = new FileOutputStream(f);
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
@@ -117,12 +116,9 @@ public class WriteComponent {
             throw new RuntimeException(e);
         }
     }
-
-
-
-    public void writeAdminDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeAdminDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
     {
-        File target = createFile(filename, keyFolder);
+        File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
@@ -131,49 +127,4 @@ public class WriteComponent {
         }
     }
 
-
-
-    /**
-     *
-     * @param filename name of target file
-     * @param keyFolder name of target folder
-     * @return the path of the target file
-     */
-    private String getFilePath(String filename, String keyFolder)
-    {
-        Path p = Paths.get("");
-        String s = p.toAbsolutePath().toString();
-        s+= "\\src\\";
-        s+= keyFolder;
-        s+= "\\java\\com\\example\\teamRL\\";
-        s+=filename;
-        return s;
-    }
-
-    /**
-     * create a new file if the file in question does not exist
-     * @param fileName target file
-     * @param keyFolder target folder
-     * @return the file in question
-     */
-    private File createFile(String fileName, String keyFolder)
-    {
-        String path = getFilePath(fileName, keyFolder);
-        File f = new File(path);
-
-        try{
-            if(!f.exists())
-            {
-                f.createNewFile();
-                System.out.println("File " + f.getName() + " created"); //change to log
-            }
-            else{
-                System.out.println("File " + f.getName() + " already exists. File will be overwritten"); //change to log
-            }
-        }catch(IOException e)
-        {
-            e.printStackTrace(); //change to log
-        }
-        return f;
-    }
 }

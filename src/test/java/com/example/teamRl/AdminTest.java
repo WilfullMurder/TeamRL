@@ -76,24 +76,24 @@ class AdminTest {
     void testGetMember3() {
 
         ArrayList<User> userList = new ArrayList<>();
-        userList.add(new User("Aoe", "foo", "42", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Boe", "foo", "43", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Coe", "foo", "44", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Doe", "foo", "45", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Foe", "foo", "46", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Goe", "foo", "47", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Hoe", "foo", "48", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Joe", "foo", "49", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Koe", "foo", "50", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Loe", "foo", "51", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Moe", "foo", "52", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Noe", "foo", "53", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Ooe", "foo", "54", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Poe", "foo", "55", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Qoe", "foo", "56", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Roe", "foo", "57", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Soe", "foo", "58", "jane.doe@example.org", "foo", "foo", "foo"));
-        userList.add(new User("Toe", "foo", "59", "jane.doe@example.org", "foo", "foo", "foo"));
+        userList.add(new User("Aoe", "foo", "42", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Boe", "foo", "43", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Coe", "foo", "44", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Doe", "foo", "45", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Foe", "foo", "46", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Goe", "foo", "47", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Hoe", "foo", "48", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Joe", "foo", "49", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Koe", "foo", "50", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Loe", "foo", "51", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Moe", "foo", "52", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Noe", "foo", "53", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Ooe", "foo", "54", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Poe", "foo", "55", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Qoe", "foo", "56", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Roe", "foo", "57", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Soe", "foo", "58", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
+        userList.add(new User("Toe", "foo", "59", "jane.doe@example.org", "foo", "foo", "foo", "foo"));
 
         Admin admin = new Admin();
         admin.setMembers(userList);
@@ -115,24 +115,24 @@ class AdminTest {
     void testGetMember5() {
 
         ArrayList<User> userList = new ArrayList<>();
-        userList.add(new User("aoo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("boo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("coo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("doo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("eoo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("foo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("goo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("hoo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("joo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("loo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("moo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("noo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("ooo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("poo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("qoo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("roo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("soo", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));
-        userList.add(new User("too", "foo", "215643", "mail@mail.com", "34678320", "3212", "4321"));;
+        userList.add(new User("aoo", "foo", "215643", "mail@mail.com", "foo34678320","34678320", "3212", "4321"));
+        userList.add(new User("boo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("coo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("doo", "foo", "215643", "mail@mail.com", "foo34678320","34678320", "3212", "4321"));
+        userList.add(new User("eoo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("foo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("goo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("hoo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("joo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("loo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("moo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("noo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("ooo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("poo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("qoo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("roo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("soo", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));
+        userList.add(new User("too", "foo", "215643", "mail@mail.com","foo34678320", "34678320", "3212", "4321"));;
 
         Admin admin = new Admin();
         admin.setMembers(userList);

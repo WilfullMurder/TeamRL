@@ -7,33 +7,33 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserTest {
     /**
      * Methods under test:
-     *
-     *   {@link User#User()}
-     *   {@link User#setAdmin(Admin)}
-     *   {@link User#setAdminFlag(boolean)}
-     *   {@link User#setDOB(String)}
-     *   {@link User#setEmail(String)}
-     *   {@link User#setEndYear(String)}
-     *   {@link User#setForename(String)}
-     *   {@link User#setPassword(String)}
-     *   {@link User#setStartYear(String)}
-     *   {@link User#setSuperFlag(boolean)}
-     *   {@link User#setSuperUser(SuperUser)}
-     *   {@link User#setSurname(String)}
-     *   {@link User#setUobNumber(String)}
-     *   {@link User#requestAdminRights()}
-     *   {@link User#getAdmin()}
-     *   {@link User#getAdminFlag()}
-     *   {@link User#getDOB()}
-     *   {@link User#getEmail()}
-     *   {@link User#getEndYear()}
-     *   {@link User#getForename()}
-     *   {@link User#getPassword()}
-     *   {@link User#getStartYear()}
-     *   {@link User#getSuperFlag()}
-     *   {@link User#getSuperUser()}
-     *   {@link User#getSurname()}
-     *   {@link User#getUobNumber()}
+     * <p>
+     * {@link User#User()}
+     * {@link User#setAdmin(Admin)}
+     * {@link User#setAdminFlag(boolean)}
+     * {@link User#setDOB(String)}
+     * {@link User#setEmail(String)}
+     * {@link User#setEndYear(String)}
+     * {@link User#setForename(String)}
+     * {@link User#setPassword(String)}
+     * {@link User#setStartYear(String)}
+     * {@link User#setSuperFlag(boolean)}
+     * {@link User#setSuperUser(SuperUser)}
+     * {@link User#setSurname(String)}
+     * {@link User#setUobNumber(String)}
+     * {@link User#requestAdminRights()}
+     * {@link User#getAdmin()}
+     * {@link User#getAdminFlag()}
+     * {@link User#getDOB()}
+     * {@link User#getEmail()}
+     * {@link User#getEndYear()}
+     * {@link User#getForename()}
+     * {@link User#getPassword()}
+     * {@link User#getStartYear()}
+     * {@link User#getSuperFlag()}
+     * {@link User#getSuperUser()}
+     * {@link User#getSurname()}
+     * {@link User#getUobNumber()}
      */
     @Test
     void testConstructor() {
@@ -69,33 +69,33 @@ class UserTest {
 
     /**
      * Methods under test:
-     *
-     *   {@link User#User(String, String)}
-     *   {@link User#setAdmin(Admin)}
-     *   {@link User#setAdminFlag(boolean)}
-     *   {@link User#setDOB(String)}
-     *   {@link User#setEmail(String)}
-     *   {@link User#setEndYear(String)}
-     *   {@link User#setForename(String)}
-     *   {@link User#setPassword(String)}
-     *   {@link User#setStartYear(String)}
-     *   {@link User#setSuperFlag(boolean)}
-     *   {@link User#setSuperUser(SuperUser)}
-     *   {@link User#setSurname(String)}
-     *   {@link User#setUobNumber(String)}
-     *   {@link User#requestAdminRights()}
-     *   {@link User#getAdmin()}
-     *   {@link User#getAdminFlag()}
-     *   {@link User#getDOB()}
-     *   {@link User#getEmail()}
-     *   {@link User#getEndYear()}
-     *   {@link User#getForename()}
-     *   {@link User#getPassword()}
-     *   {@link User#getStartYear()}
-     *   {@link User#getSuperFlag()}
-     *   {@link User#getSuperUser()}
-     *   {@link User#getSurname()}
-     *   {@link User#getUobNumber()}
+     * <p>
+     * {@link User#User(String, String)}
+     * {@link User#setAdmin(Admin)}
+     * {@link User#setAdminFlag(boolean)}
+     * {@link User#setDOB(String)}
+     * {@link User#setEmail(String)}
+     * {@link User#setEndYear(String)}
+     * {@link User#setForename(String)}
+     * {@link User#setPassword(String)}
+     * {@link User#setStartYear(String)}
+     * {@link User#setSuperFlag(boolean)}
+     * {@link User#setSuperUser(SuperUser)}
+     * {@link User#setSurname(String)}
+     * {@link User#setUobNumber(String)}
+     * {@link User#requestAdminRights()}
+     * {@link User#getAdmin()}
+     * {@link User#getAdminFlag()}
+     * {@link User#getDOB()}
+     * {@link User#getEmail()}
+     * {@link User#getEndYear()}
+     * {@link User#getForename()}
+     * {@link User#getPassword()}
+     * {@link User#getStartYear()}
+     * {@link User#getSuperFlag()}
+     * {@link User#getSuperUser()}
+     * {@link User#getSurname()}
+     * {@link User#getUobNumber()}
      */
     @Test
     void testConstructor2() {
@@ -163,6 +163,7 @@ class UserTest {
     @Test
     void testToCSV() {
         assertEquals("null,null,null", (new User("foo", "foo")).toCSV());
+        assertEquals("null,null,null,foo,null,null,null", (new User("foo", "foo")).toCSV());
     }
 }
 
