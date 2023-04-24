@@ -2,6 +2,7 @@ package com.teamrl.app.components;
 //lead auth:JacobFarrow(20007972)
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.teamrl.app.Admin;
 import com.teamrl.app.User;
 
 import java.io.*;
@@ -23,6 +24,7 @@ public class ReadComponent {
             throw new RuntimeException(e);
         }
 
+        //is this worth the separate info component?
         ArrayList<User> users = new ArrayList<>();
         for(int i =0; i < data.size(); i++)
         {
@@ -33,6 +35,24 @@ public class ReadComponent {
         return users;
     }
 
+    public static ArrayList<Admin> readAdminDataFromJSON(String filename, String keyFolder){
+        ArrayList<Admin> data = new ArrayList<>();
+        String path = FileComponent.getFilePath(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try{
+            data = mapper.readValue(new File(path), new TypeReference<ArrayList<Admin>>(){});
+        }catch(IOException e){
+            throw new RuntimeException(e);
+        }
+        return data;
+    }
+
+    /**
+     * needs finishing
+     * @param filename
+     * @param keyFolder
+     * @return
+     */
     public static ArrayList<UserInfoComponent> readUserDataFromCSV(String filename, String keyFolder)
     {
         ArrayList<UserInfoComponent> data = new ArrayList<>();

@@ -61,23 +61,23 @@ class WriteComponentTest {
     @Test
     void testWriteUserDataToJSON3() {
         ArrayList<User> userList = new ArrayList<>();
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
         WriteComponent.writeUserDataToJSON("json-foobar.txt", "test", userList);
     }
 
@@ -122,23 +122,23 @@ class WriteComponentTest {
     @Test
     void testWriteUserDataToJSONPretty3() {
         ArrayList<User> userList = new ArrayList<>();
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
         WriteComponent.writeUserDataToJSONPretty("pretty-foobar.txt", "test", userList);
     }
 
@@ -183,23 +183,23 @@ class WriteComponentTest {
     @Test
     void testWriteUserDataToCSV3() {
         ArrayList<User> userList = new ArrayList<>();
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
-        userList.add(new User("foo", "bar","foo", "bar","foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
+        userList.add(new User("foo", "bar", "foo", "bar", "foo", "bar", "foo", "bar"));
         WriteComponent.writeUserDataToCSV("csv-foobar.txt", "test", userList);
     }
 
@@ -265,6 +265,15 @@ class WriteComponentTest {
         WriteComponent.convertUserData(userList);
         assertEquals("foo", userList.get(0).getMyInfo().getPassword());
 
+    }
+
+    /**
+     * Method under test: {@link WriteComponent#writeAdminDataToJSONPretty(String, String, ArrayList)}
+     */
+    @Test
+    void testWriteAdminDataToJSONPretty() {
+
+        WriteComponent.writeAdminDataToJSONPretty("admin-foo.txt", "test", new ArrayList<>());
     }
 }
 

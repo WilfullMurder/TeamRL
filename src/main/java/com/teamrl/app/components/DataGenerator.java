@@ -1,6 +1,7 @@
 package com.teamrl.app.components;
 //lead auth:JacobFarrow(20007972)
 import com.teamrl.app.Activity;
+import com.teamrl.app.Admin;
 import com.teamrl.app.User;
 
 import java.util.ArrayList;
@@ -125,6 +126,21 @@ public class DataGenerator {
             //default sort the list by surname
             Collections.sort(userList, new BeanComparator("surname"));
             return userList;
+        }
+
+        public Admin generateAdmin(int memberCount){
+            String act = ACTIVITY_NAMES[random.nextInt(ACTIVITY_NAMES.length-1)];
+            String role = EXECUTIVE_ROLES[random.nextInt(EXECUTIVE_ROLES.length-1)];
+            ArrayList<String> members = new ArrayList<>();
+
+            for(int i = 0; i<memberCount; i++)
+            {
+                String fn = FORENAMES[random.nextInt(FORENAMES.length)-1] + SURNAMES[random.nextInt(SURNAMES.length-1)];
+                members.add(fn);
+            }
+
+            Admin a = new Admin(act,role,members,null);
+            return a;
         }
 
         public ArrayList<Activity> generateActivities(int count)

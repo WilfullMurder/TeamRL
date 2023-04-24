@@ -5,7 +5,9 @@ import java.util.ArrayList;
 //lead auth:JacobFarrow(20007972)
 public class Admin {
     //auth:SadiyahZafhar(UB:22001015)
+    private String myName;
     private String myActivity;
+    private String role;
     private ArrayList<String> myActivityMembers; //just the full names of members for searching db
     private ArrayList<String> bannedList; //just in case
 
@@ -25,6 +27,20 @@ public class Admin {
         this.myActivityMembers=data;
         this.bannedList=banned;
     }
+    public Admin(String a, String r, ArrayList<String>data, ArrayList<String> banned){
+        this.myActivity=a;
+        this.role=r;
+        this.myActivityMembers=data;
+        this.bannedList=banned;
+    }
+
+    public Admin(String n, String a, String r, ArrayList<String>data, ArrayList<String> banned){
+        this.myName=n;
+        this.myActivity=a;
+        this.role=r;
+        this.myActivityMembers=data;
+        this.bannedList=banned;
+    }
     public String getMyActivity() {
         return myActivity;
     }
@@ -39,6 +55,21 @@ public class Admin {
 
     public void setMyActivityMembers(ArrayList<String> myActivityMembers) {
         this.myActivityMembers = myActivityMembers;
+    }
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getMyName() {
+        return myName;
+    }
+
+    public void setMyName(String myName) {
+        this.myName = myName;
     }
 
     public void addNewMember(String m){
@@ -66,10 +97,12 @@ public class Admin {
 
     @Override
     public String toString() {
-        return "{\"myActivity\":" + String.format("\"%s\"", myActivity) +
+        return  String.format("\"%s\"", myName)+
+                ": {\"myActivity\":" + String.format("\"%s\"", myActivity) +
                 ", \"myActivityMembers\":" + String.format("\"%s\"", myActivityMembers) +
                 ", \"bannedList\":" + String.format("\"%s\"",bannedList) +
                 '}';
     }
+
 
 }

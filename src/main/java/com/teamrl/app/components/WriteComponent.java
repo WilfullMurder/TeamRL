@@ -1,6 +1,7 @@
 package com.teamrl.app.components;
 //lead auth:JacobFarrow(20007972)
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.teamrl.app.Admin;
 import com.teamrl.app.User;
 
 import java.io.*;
@@ -99,10 +100,6 @@ public class WriteComponent {
         }
     }
 
-
-
-
-
     public static ArrayList<UserInfoComponent> convertUserData(ArrayList<User> data){
         ArrayList<UserInfoComponent> ui = new ArrayList<>();
         for(int i = 0; i< data.size(); i++)
@@ -112,6 +109,22 @@ public class WriteComponent {
         return ui;
     }
 
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @param data ArrayList of User class
+     */
+    public static void writeAdminDataToJSONPretty(String filename, String keyFolder, ArrayList<Admin> data)
+    {
+        File target = FileComponent.createFile(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
 

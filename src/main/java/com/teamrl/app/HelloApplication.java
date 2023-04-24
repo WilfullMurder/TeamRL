@@ -1,11 +1,15 @@
 package com.teamrl.app;
 //lead auth:JacobFarrow(20007972)
+import com.teamrl.app.components.DataGenerator;
+import com.teamrl.app.components.ReadComponent;
+import com.teamrl.app.components.WriteComponent;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class HelloApplication extends Application {
     @Override
@@ -18,6 +22,20 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+
+        DataGenerator DG = new DataGenerator();
+        ArrayList<Admin> admins = ReadComponent.readAdminDataFromJSON("Admins.txt", "main");
+        for(int i =0; i< admins.size(); i++){
+            System.out.println(admins.get(i).toString());
+        }
+
+//        ArrayList<String> users = new ArrayList<>();
+//        for(int i =0; i< 10; i++){
+//            users.add("foobar");
+//            admins.add(new Admin("name", "activity", "role", users, null));
+//        }
+
+//       WriteComponent.writeAdminDataToJSONPretty("Admins.txt", "main", admins);
+//        WriteComponent.writeUserDataToJSONPretty("Users.txt", "main", users);
     }
 }
