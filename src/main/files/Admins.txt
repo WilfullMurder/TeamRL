@@ -1,0 +1,61 @@
+[ {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+}, {
+  "myName" : "name",
+  "myActivity" : "activity",
+  "role" : "role",
+  "myActivityMembers" : [ "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar", "foobar" ],
+  "bannedList" : null
+} ]

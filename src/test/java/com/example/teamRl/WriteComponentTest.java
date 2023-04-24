@@ -22,8 +22,10 @@ class WriteComponentTest {
     void testWriteUserDataToJSON2() {
         ArrayList<User> users = new ArrayList<>();
         users.add(new User("mail@mail", "3276482367945"));
+        ArrayList<UserInfoComponent> data = new ArrayList<>();
+        data.add(users.get(0).getMyInfo());
         WriteComponent writeComponent = new WriteComponent();
-        writeComponent.writeUserDataToJSON("JSONtest2.txt", "test", users);
+        writeComponent.writeUserDataToJSON("JSONtest2.txt", "test", data);
     }
 
 

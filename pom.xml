@@ -4,16 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>SDD_CW02_TeamRL_JFX</artifactId>
+    <groupId>com.TeamRL</groupId>
+    <artifactId>TeamRL</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>SDD_CW02_TeamRL_JFX</name>
+    <name>TeamRL</name>
 
     <properties>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.8.2</junit.version>
-        <jackson.version>2.14.2</jackson.version>
     </properties>
 
     <dependencies>
@@ -35,15 +33,21 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>4.11.0</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.14.2</version>
         </dependency>
     </dependencies>
 
@@ -67,9 +71,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>
-                                com.example.sdd_cw02_teamrl_jfx/com.example.teamRl.HelloApplication
-                            </mainClass>
+                            <mainClass>com.teamrl.teamrl/com.teamrl.app.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

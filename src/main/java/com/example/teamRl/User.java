@@ -2,30 +2,20 @@
 package com.example.teamRl;
 //auth:HasanaynDad(22007018)
 
+import java.util.ArrayList;
+
 /**
  * User class acts as a POJO for data storage
  */
 public class User {
-
-    //sort out the password
-        //add to constructor
-        //generate encryption
-        //change password method
-
     //sort out methods
         //login //logout
         //sign up //join activity
         //Leave activity //view activity
 
-    private String surname;
-    private String forename;
-    private String uobNumber;
-    private String email;
-    private String DOB;
-    private String startYear;
-    private String endYear;
+    private UserInfoComponent myInfo;
 
-    private String password;
+    private ArrayList<String> myActivites;
 
     private Admin admin;
     private SuperUser superUser;
@@ -33,41 +23,48 @@ public class User {
     private boolean superFlag;
 
     public User() {
-        //java beans must have a default constructor
+        //POJO/beans must have a default constructor
     }
 
-    public User(String e, String p) {
-        this.email = e;
-        //check password and load User
+    //overloaded constructor for testing
+    public User(String e, String p)
+    {
+        this.myInfo = new UserInfoComponent();
+        this.myInfo.setEmail(e);
+        this.setPassword(p);
     }
+
 
     /**
-     * overridden constructor
+     * overridden info constructor
      *
      * @param surname   ~ target User surname
      * @param forename  ~ target User forename
      * @param uobNumber ~ target User UOB Number
      * @param email     ~ target User email
-     * @param DOB       ~ target User Date of Birth (dd/mm/yyyy)
+     * @param dob       ~ target User Date of Birth (dd/mm/yyyy)
+     * @param password  ~ target User password
      * @param startYear ~ target User start year
      * @param endYear   ~ target User end year (if valid)
      */
-    public User(String surname, String forename, String uobNumber, String email, String DOB, String startYear, String endYear) {
-        this.surname = surname;
-        this.forename = forename;
-        this.uobNumber = uobNumber;
-        this.email = email;
-        this.DOB = DOB;
-        this.startYear = startYear;
-        this.endYear = endYear;
-        checkForStaff();
+    public User(String surname, String forename, String uobNumber, String email, String password, String dob, String startYear, String endYear) {
+        this.myInfo = new UserInfoComponent(surname, forename, uobNumber, email, password, dob, startYear, endYear);
+    }
+
+    public UserInfoComponent getMyInfo() {
+        return myInfo;
+    }
+
+    public void setMyInfo(UserInfoComponent myInfo) {
+        this.myInfo = myInfo;
     }
 
     //we might want to get rid of this check
     //and/or write a flag to file
     private void checkForStaff() {
-        String s = this.uobNumber.substring(0, 2);
-        if (s.equals("900") && endYear.equals("")) {
+        String s = this.myInfo.getUobNumber().substring(0, 2);
+        if (s.equals("900") && this.myInfo.getEndYear().equals("")) {
+
             //load super info from file?
             //i.e. activitieslist, adminlist?
             this.superUser = new SuperUser();
@@ -75,61 +72,63 @@ public class User {
     }
 
     public String getSurname() {
-        return surname;
+        return this.myInfo.getSurname();
     }
-
     public void setSurname(String surname) {
-        this.surname = surname;
+        this.myInfo.setSurname(surname);
     }
-
     public String getForename() {
-        return forename;
+        return this.myInfo.getForename();
     }
-
     public void setForename(String forename) {
-        this.forename = forename;
+        this.myInfo.setForename(forename);
     }
 
     public String getUobNumber()
     {
-        return this.uobNumber;
+        return this.myInfo.getUobNumber();
     }
 
     public void setUobNumber(String ub)
     {
-        this.uobNumber = ub;
+        this.myInfo.setUobNumber(ub);
     }
 
     public String getEmail() {
-        return email;
+        return this.myInfo.getEmail();
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.myInfo.setEmail(email);
     }
 
     public String getDOB() {
-        return DOB;
+        return this.myInfo.getDOB();
     }
 
-    public void setDOB(String DOB) {
-        this.DOB = DOB;
+    public void setDOB(String dob) {
+        this.myInfo.setDOB(dob);
     }
 
     public String getStartYear() {
-        return startYear;
+        return this.myInfo.getStartYear();
     }
 
     public void setStartYear(String startYear) {
-        this.startYear = startYear;
+        this.myInfo.setStartYear(startYear);
     }
 
-    public String getEndYear() {
-        return endYear;
-    }
+    public String getEndYear() { return this.myInfo.getEndYear(); }
 
     public void setEndYear(String endYear) {
-        this.endYear = endYear;
+        this.myInfo.setEndYear(endYear);
+    }
+    public String getPassword() {
+        return this.myInfo.getPassword();
+    }
+
+    public void setPassword(String password) {
+        this.myInfo.setPassword(password);
     }
 
     public Admin getAdmin() {
@@ -147,6 +146,18 @@ public class User {
     public void setSuperUser(SuperUser superUser) {
         this.superUser = superUser;
     }
+
+
+
+
+    public ArrayList<String> getMyActivites() {
+        return myActivites;
+    }
+
+    public void setMyActivites(ArrayList<String> activites) {
+        this.myActivites = activites;
+    }
+
 
     //we might not need these flags but, we might not want to save the Admin/Super class into the user class data??
     public boolean getAdminFlag() {
@@ -167,19 +178,18 @@ public class User {
     //we might not need these flags but, we might not want to save the Admin/Super class into the user class data??
 
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     /**
      * converts the class into JSON format
      * @return formatted JSON string
      */
     public String toJSON() {
-        return  "{\"surname\":" + String.format("\"%s\"", surname) +
-                ", \"forename\": " + String.format("\"%s\"", forename) +
-                ", \"uobNumber\":" + String.format("\"%s\"", uobNumber) +
-                ", \"email\":" + String.format("\"%s\"", email) +
-                ", \"DOB\":" + String.format("\"%s\"", DOB) +
-                ", \"startYear\":" + String.format("\"%s\"", startYear) +
-                ", \"endYear\":" + String.format("\"%s\"", endYear) +
-                "}";
+        //needs password adding in after hash
+        return  this.myInfo.toJSON();
 
     }
 
@@ -188,13 +198,7 @@ public class User {
      * @return formatted csv string
      */
     public String toCSV() {
-        return surname +
-                "," + forename +
-                "," + uobNumber +
-                "," + email +
-                "," + DOB +
-                "," + startYear +
-                "," + endYear;
+        return this.myInfo.toCSV();
     }
 
     public void requestAdminRights() {
@@ -204,11 +208,6 @@ public class User {
         //message String variable?
     }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+
 }
