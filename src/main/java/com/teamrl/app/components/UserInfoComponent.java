@@ -1,5 +1,12 @@
 package com.teamrl.app.components;
 //lead auth:JacobFarrow(20007972)
+
+/**
+ * userinfocomp is a POJO for user data
+ * It essentially holds the state of the user
+ */
+
+
 public class UserInfoComponent {
     //auth:JacobFarrow(20007972)
     //sort out the password

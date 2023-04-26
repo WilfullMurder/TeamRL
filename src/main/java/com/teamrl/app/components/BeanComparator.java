@@ -19,7 +19,7 @@ public class BeanComparator implements Comparator<Object> {
     public int compare(Object o1, Object o2) {
         try {
             if (o1 != null && o2 != null) {
-                //returns the underlying Method object of specified public member method of class object, so we can compare them
+                //returns the underlying Method object of specified public member method of class objects, for comparison
                 o1 = o1.getClass().getMethod(getter, new Class[0]).invoke(o1, new Object[0]);
                 o2 = o2.getClass().getMethod(getter, new Class[0]).invoke(o2, new Object[0]);
             }
@@ -31,7 +31,7 @@ public class BeanComparator implements Comparator<Object> {
         //nested ternary operator
         //Comparable returns -1,0,1 left <,=,> right
         //we want to sort nulls to the top (not that there should be any nulls) (every -1 to the left)
-        //we can just copy/paste and flip this for reverse order btw
+        //we can just copy/paste and move the negative for reverse order btw
         return (o1 == null) ? -1 : ((o2==null) ? 1 : ((Comparable<Object>)o1).compareTo(o2));
     }
 }

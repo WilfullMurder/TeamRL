@@ -2,6 +2,7 @@ package com.teamrl.app.components;
 //lead auth:JacobFarrow(20007972)
 import com.teamrl.app.Activity;
 import com.teamrl.app.Admin;
+import com.teamrl.app.SuperUser;
 import com.teamrl.app.User;
 
 import java.util.ArrayList;
@@ -141,6 +142,23 @@ public class DataGenerator {
 
             Admin a = new Admin(act,role,members,null);
             return a;
+        }
+
+        public SuperUser generateSuper(int adminCount){
+            ArrayList<String> admins = new ArrayList<>();
+            ArrayList<String> activities = new ArrayList<>();
+
+            for(int i = 0; i < adminCount; i++ ){
+                String s = generateSurname() + generateForename();
+                admins.add(s);
+            }
+            for(int  i =0; i<ACTIVITY_NAMES.length;i++){
+                activities.add(ACTIVITY_NAMES[i]);
+            }
+
+            SuperUser s = new SuperUser(admins,activities);
+
+            return s;
         }
 
         public ArrayList<Activity> generateActivities(int count)

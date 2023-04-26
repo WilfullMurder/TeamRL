@@ -17,6 +17,8 @@ public class User {
     private UserInfoComponent myInfo;
 
     private ArrayList<String> myActivities;
+    private Admin admin;
+    private SuperUser superUser;
 
 
     public User() {
@@ -62,10 +64,16 @@ public class User {
 
         if (admin) {
             //read admin from file
-            //this.administrator=new Administrator();
+            //search by own name? uob?
+            //ReadComponent call
+            //this.admin=new Admin();
         }
         if (staff && checkForStaff(uobNumber, endYear)) {
-            //this.superUser = new SuperUser();
+            //read super from file
+            //search by own name? uob?
+            //ReadComponent call
+            //this.admin=new Admin();
+            this.superUser = new SuperUser();
         }
         this.myInfo = new UserInfoComponent(surname, forename, uobNumber, email, password, dob, startYear, endYear, admin, staff);
     }
@@ -107,7 +115,21 @@ public class User {
     public void setMyActivities(ArrayList<String> myActivities) {
         this.myActivities = myActivities;
     }
+    public Admin getAdmin() {
+        return admin;
+    }
 
+    public void setAdmin(Admin admin) {
+        this.admin = admin;
+    }
+
+    public SuperUser getSuperUser() {
+        return superUser;
+    }
+
+    public void setSuperUser(SuperUser superUser) {
+        this.superUser = superUser;
+    }
 
 
 

@@ -31,4 +31,11 @@ public class SuperUser {
     public void setActivitiesList(ArrayList<String> activitiesList) {
         this.activitiesList = activitiesList;
     }
+
+    @Override
+    public String toString(){
+        return
+        "\"adminList\":" + String.format("\"%s\"", adminList) +
+        ", \"activitiesList\":" + String.format("\"%s\"", activitiesList);
+    }
 }

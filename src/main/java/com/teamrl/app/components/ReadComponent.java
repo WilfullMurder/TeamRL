@@ -3,6 +3,7 @@ package com.teamrl.app.components;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.teamrl.app.Admin;
+import com.teamrl.app.SuperUser;
 import com.teamrl.app.User;
 
 import java.io.*;
@@ -41,6 +42,17 @@ public class ReadComponent {
         ObjectMapper mapper = new ObjectMapper();
         try{
             data = mapper.readValue(new File(path), new TypeReference<ArrayList<Admin>>(){});
+        }catch(IOException e){
+            throw new RuntimeException(e);
+        }
+        return data;
+    }
+    public static ArrayList<SuperUser> readSuperDataFromJSON(String filename, String keyFolder){
+        ArrayList<SuperUser> data = new ArrayList<>();
+        String path = FileComponent.getFilePath(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try{
+            data = mapper.readValue(new File(path), new TypeReference<ArrayList<SuperUser>>(){});
         }catch(IOException e){
             throw new RuntimeException(e);
         }
