@@ -1,0 +1,16 @@
+#background-image-view{
+-fx-background-image: url("/img/logo.jpg");
+-fx-background-repeat: stretch;
+-fx-background-position: center center;
+ -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+
+#mini-logo{
+    -fx-background-image: url("/img/mini-logo.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 200 200;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+

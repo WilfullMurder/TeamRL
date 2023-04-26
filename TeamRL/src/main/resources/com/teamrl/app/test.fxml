@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<BorderPane fx:id="backgroundImageView" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.teamrl.app.controllers.TestController">
+    <top>
+        <VBox fx:id="titleText">
+                <Label  prefHeight="57.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-text-fill: #24a0ed;" text="CONNECT TODAY" >
+                    <font>
+                        <Font name="SansSerif Regular" size="25.0" />
+                    </font>
+                </Label>
+        </VBox>
+    </top>
+    <center>
+        <VBox fx:id="loginBox" >
+            <Label prefHeight="57.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-text-fill: #9BA4B5;" text="Login">
+                <font>
+                    <Font name="SansSerif Regular" size="25.0" />
+                </font>
+            </Label>
+        </VBox>
+        <GridPane fx:id="menuGrid">
+        <Button fx:id="cancelButton"  mnemonicParsing="false" onAction="#onCancelButtonClick" style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9; -fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;" text="Cancel">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <TextField fx:id="loginUsernameTextField"  prefHeight="30.0" prefWidth="300.0" promptText="Username / Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+            <font>
+                <Font name="SansSerif Regular" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <ImageView fitHeight="40.0" fitWidth="35.0"  pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/users.png" />
+            </image>
+        </ImageView>
+        <PasswordField fx:id="loginPasswordPasswordField"  prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+            <font>
+                <Font name="SansSerif Regular" size="14.0" />
+            </font>
+        </PasswordField>
+        <ImageView fitHeight="40.0" fitWidth="35.0"  pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/lock.png" />
+            </image>
+        </ImageView>
+        <CheckBox  mnemonicParsing="false" style="-fx-text-fill: #A9A9A9;" text="Remember Me">
+            <font>
+                <Font name="SansSerif Regular" size="15.0" />
+            </font>
+        </CheckBox>
+        <Button fx:id="forgottenPasswordLink"  mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9;" text="Forgot your Password?" underline="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="invalidLoginCredentials" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="175.0" prefHeight="16.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Label>
+        <Button fx:id="LoginButton"  mnemonicParsing="false" onAction="#onLoginButtonClick" style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #A9A9A9;" text="Login">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="RegisterButton"  mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9;" text="Not a user? Sign up today" underline="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        </GridPane>
+    </center>
+
+
+
+
+</BorderPane>
