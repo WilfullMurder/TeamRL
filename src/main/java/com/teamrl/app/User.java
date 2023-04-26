@@ -78,6 +78,14 @@ public class User {
         this.myInfo = new UserInfoComponent(surname, forename, uobNumber, email, password, dob, startYear, endYear, admin, staff);
     }
 
+    /**
+     * overridden info constructor
+     * @param userInfoComponent ~ the component of information belonging to this user
+     */
+    public User(UserInfoComponent userInfoComponent) {
+        this.myInfo = userInfoComponent;
+    }
+
     public UserInfoComponent getMyInfo() {
         return myInfo;
     }

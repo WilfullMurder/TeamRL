@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("register.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("register-bg-solid.fxml"));
         double width = Screen.getPrimary().getVisualBounds().getWidth();
         double height = Screen.getPrimary().getVisualBounds().getHeight();
         Scene scene = new Scene(fxmlLoader.load(), width, height);
@@ -27,7 +27,11 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-//        launch();
 
+        DataGenerator DG = new DataGenerator();
+
+        WriteComponent.writeUserDataToJSONPretty("Users.txt", "main", DG.generateUserData(30));
+
+        launch();
     }
 }

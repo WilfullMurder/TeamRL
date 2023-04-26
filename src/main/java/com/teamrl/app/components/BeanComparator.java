@@ -2,6 +2,7 @@ package com.teamrl.app.components;
 //lead auth:JacobFarrow(20007972)
 import java.util.Comparator;
 
+//@TODO: compares by ascii values so need to work out how to check between upper/lower case matches???
 public class BeanComparator implements Comparator<Object> {
     //auth:JacobFarrow(20007972)
     private String getter;

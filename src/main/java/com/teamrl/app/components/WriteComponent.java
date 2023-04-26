@@ -1,6 +1,7 @@
 package com.teamrl.app.components;
 //lead auth:JacobFarrow(20007972)
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.teamrl.app.Activity;
 import com.teamrl.app.Admin;
 import com.teamrl.app.SuperUser;
 import com.teamrl.app.User;
@@ -133,6 +134,22 @@ public class WriteComponent {
      * @param data ArrayList of User class
      */
     public static void writeSuperDataToJSONPretty(String filename, String keyFolder, ArrayList<SuperUser> data)
+    {
+        File target = FileComponent.createFile(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @param data ArrayList of User class
+     */
+    public static void writeActivityDataToJSONPretty(String filename, String keyFolder, ArrayList<Activity> data)
     {
         File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();

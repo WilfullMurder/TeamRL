@@ -125,7 +125,7 @@ public class DataGenerator {
                 }
             }
             //default sort the list by surname
-            Collections.sort(userList, new BeanComparator("surname"));
+            userList.sort(new BeanComparator("surname"));
             return userList;
         }
 
@@ -161,9 +161,33 @@ public class DataGenerator {
             return s;
         }
 
-        public ArrayList<Activity> generateActivities(int count)
+        public ArrayList<Activity> generateActivities()
         {
             ArrayList<Activity> activities = new ArrayList<>();
+
+            for(int i=0; i<ACTIVITY_NAMES.length;i++){
+                ArrayList<String> desc = new ArrayList<>();
+                int lines = random.nextInt(4);
+                switch(lines){
+                    case 0:
+                    case 1:
+                        desc.add(LOREM_IPSUM_SHORT);
+                        break;
+                    case 2:
+                        desc.add(LOREM_IPSUM_MEDIUM);
+                        break;
+                    case 3:
+                    default:
+                        desc.add(LOREM_IPSUM_LONG);
+                        break;
+                }
+
+                String mail = generateEmail(generateSurname(), generateForename());
+
+                Activity a = new Activity(ACTIVITY_NAMES[i], desc, mail, "Societies spaces", 3.00, 5.00, null);
+                activities.add(a);
+            }
+
             return activities;
         }
 
@@ -288,7 +312,7 @@ public class DataGenerator {
             //remember nextInt is EXCLUSIVE!!!
             day = random.nextInt(bound)+1;
             //parse string
-            s+= day + "/" + month + "/" + year;
+            s+= year  + "-" + month + "-" + day;
             return s;
 
         }
