@@ -21,32 +21,30 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.DatePicker?>
-<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.teamrl.app.controllers.RegisterController">
+<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.teamrl.app.controllers.RegisterRptController">
 
-        <!-- background img -->
+        <!-- An AnchorPane for the background img -->
         <StackPane BorderPane.alignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
             <children>
-                <!-- Logo -->
+                <!-- background image -->
                 <ImageView fx:id="backgroundImageView">
                     <image>
-                        <Image  url="@img/logo-bg.png" />
+                        <Image  url="@img/logo-bg-rpt.png" />
                     </image>
                 </ImageView>
             </children>
         </StackPane>
-    <!-- End background img -->
-
+    <!-- Logo -->
     <AnchorPane layoutX="200.0" layoutY="200.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER">
-        <!--Title-->
         <children>
             <Label layoutX="203.0" layoutY="1.0" prefHeight="57.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-text-fill: #24a0ed;" text="CONNECT TODAY">
                 <font>
                     <Font name="SansSerif Regular" size="25.0" />
                 </font>
             </Label>
-            <!--End Title-->
+            <!-- End Logo -->
 
-    <!-- registration form -->
+    <!-- Signup form -->
     <Label layoutX="230.0" layoutY="275.0" prefHeight="36.0" prefWidth="130.0" style="-fx-text-fill: #A9A9A9;" text="Sign-Up">
         <font>
             <Font name="SansSerif Regular" size="30.0" />
@@ -54,7 +52,7 @@
     </Label>
 
     <!-- User Inputs -->
-    <TextField fx:id="registerUsernameTextField" layoutX="155.0" layoutY="320.0" prefHeight="30.0" prefWidth="300.0" promptText="Username" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+    <TextField fx:id="signUpUsernameTextField" layoutX="155.0" layoutY="320.0" prefHeight="30.0" prefWidth="300.0" promptText="Username" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
         <font>
             <Font name="SansSerif Regular" size="14.0" />
         </font>
@@ -64,7 +62,7 @@
             <Image url="@img/users.png" />
         </image>
     </ImageView>
-    <TextField fx:id="registerEmailTextField" layoutX="155.0" layoutY="360.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+    <TextField fx:id="signUpEmailTextField" layoutX="155.0" layoutY="360.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
         <font>
             <Font name="SansSerif Regular" size="14.0" />
         </font>
@@ -77,7 +75,7 @@
             <Image url="@img/email.png" />
         </image>
     </ImageView>
-    <PasswordField fx:id="registerPasswordPasswordField" layoutX="155.0" layoutY="400.0" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+    <PasswordField fx:id="signUpPasswordPasswordField" layoutX="155.0" layoutY="400.0" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
         <font>
             <Font name="SansSerif Regular" size="14.0" />
         </font>
@@ -87,7 +85,7 @@
             <Image url="@img/lock.png" />
         </image>
     </ImageView>
-    <PasswordField fx:id="registerRepeatPasswordPasswordField" layoutX="155.0" layoutY="440.0" prefHeight="30.0" prefWidth="300.0" promptText="Repeat Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+    <PasswordField fx:id="signUpRepeatPasswordPasswordField" layoutX="155.0" layoutY="440.0" prefHeight="30.0" prefWidth="300.0" promptText="Repeat Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
         <font>
             <Font name="SansSerif Regular" size="14.0" />
         </font>
@@ -97,7 +95,7 @@
             <Font name="SansSerif Regular" size="15.0" />
         </font>
     </Label>
-    <DatePicker fx:id="registerDateDatePicker" layoutX="250.0" layoutY="480.0" promptText="mm/dd/yyyy" showWeekNumbers="true" />
+    <DatePicker fx:id="signUpDateDatePicker" layoutX="250.0" layoutY="480.0" promptText="mm/dd/yyyy" showWeekNumbers="true" />
     <Label layoutX="130.0" layoutY="515.0" prefHeight="20.0" prefWidth="90.0" style="-fx-text-fill: #A9A9A9;" text="Gender">
         <font>
             <Font name="SansSerif Regular" size="15.0" />
@@ -128,7 +126,7 @@
     </CheckBox>
 
     <!-- Sign up button -->
-    <Button fx:id="registerButton" layoutX="230.0" layoutY="615.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="130.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Sign-Up">
+    <Button fx:id="signUpButton" layoutX="230.0" layoutY="615.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="130.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Sign-Up">
         <font>
             <Font name="SansSerif Regular" size="15.0" />
         </font>
@@ -138,7 +136,7 @@
             <Font size="15.0" />
         </font>
     </Button>
-    <!-- The End of registration form -->
+    <!-- The End of Signup form -->
         </children>
     </AnchorPane>
 
