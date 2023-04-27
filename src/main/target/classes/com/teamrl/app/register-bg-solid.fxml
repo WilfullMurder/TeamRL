@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="window" alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamrl.app.RegisterBgSolidController">
+
+        <!-- background img -->
+        <StackPane minWidth="100.0" BorderPane.alignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <children>
+                <ImageView fx:id="registerBGImageView">
+                    <image>
+                        <Image url="@img/background-solid.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </StackPane>
+    <!-- end background img -->
+    <!--registration form-->
+    <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER">
+        <children>
+            <!-- Logo -->
+            <ImageView fitHeight="305.0" fitWidth="300.0" layoutX="155.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@img/mini-logo.png" />
+                </image>
+            </ImageView>
+            <!--End Form title -->
+            <Label layoutX="218.0" layoutY="267.0" prefHeight="36.0" prefWidth="174.0" style="-fx-text-fill: #A9A9A9;" text="Connect Today">
+                <font>
+                    <Font name="SansSerif Regular" size="24.0" />
+                </font>
+            </Label>
+            <HBox layoutX="154.0" layoutY="314.0" prefHeight="36.0" prefWidth="300.0">
+                <children>
+                  <!-- User Inputs -->
+                  <TextField fx:id="registerForenameTextField" prefHeight="30.0" prefWidth="300.0" promptText="Forename" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                      <font>
+                          <Font name="SansSerif Regular" size="14.0" />
+                      </font>
+                          <HBox.margin>
+                             <Insets right="1.0" />
+                          </HBox.margin>
+                  </TextField>
+                   <TextField fx:id="registerSurnameTextField" prefHeight="30.0" prefWidth="300.0" promptText="Surname" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                      <font>
+                         <Font name="SansSerif Regular" size="14.0" />
+                      </font>
+                      <HBox.margin>
+                         <Insets left="1.0" />
+                      </HBox.margin>
+                   </TextField>
+                </children>
+            </HBox>
+        <TextField fx:id="registerUOBTextField" layoutX="154.0" layoutY="347.0" prefHeight="30.0" prefWidth="300.0" promptText="UoB Number" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+            <font>
+               <Font name="SansSerif Regular" size="14.0" />
+            </font>
+        </TextField>
+        <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="113.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/users.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="registerEmailTextField" layoutX="155.0" layoutY="383.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+            <font>
+                <Font name="SansSerif Regular" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/email.png" />
+            </image>
+        </ImageView>
+        <PasswordField fx:id="registerPasswordField" layoutX="154.0" layoutY="416.0" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+            <font>
+                <Font name="SansSerif Regular" size="14.0" />
+            </font>
+        </PasswordField>
+        <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="110.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/lock.png" />
+            </image>
+        </ImageView>
+        <PasswordField fx:id="registerRepeatPasswordField" layoutX="154.0" layoutY="449.0" prefHeight="30.0" prefWidth="300.0" promptText="Repeat Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+            <font>
+                <Font name="SansSerif Regular" size="14.0" />
+            </font>
+        </PasswordField>
+            <!--DOB picker-->
+        <Label layoutX="116.0" layoutY="488.0" prefHeight="20.0" prefWidth="105.0" style="-fx-text-fill: #A9A9A9;" text="Date of Birth">
+            <font>
+                <Font name="SansSerif Regular" size="15.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="registerDOBPicker" layoutX="281.0" layoutY="486.0" promptText="mm/dd/yyyy" showWeekNumbers="true" />
+            <!--end DOB picker-->
+
+            <!--Start date picker-->
+        <Label layoutX="116.0" layoutY="523.0" prefHeight="20.0" prefWidth="105.0" style="-fx-text-fill: #A9A9A9;" text="Start Date">
+            <font>
+                <Font name="SansSerif Regular" size="15.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="registerStartYearPicker" layoutX="281.0" layoutY="520.0" promptText="mm/dd/yyyy" showWeekNumbers="true" />
+            <!--end Start date picker-->
+
+            <!--End date picker-->
+        <Label layoutX="116.0" layoutY="558.0" prefHeight="20.0" prefWidth="105.0" style="-fx-text-fill: #A9A9A9;" text="End Date">
+            <font>
+                <Font name="SansSerif Regular" size="15.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="registerEndYearPicker" layoutX="281.0" layoutY="555.0" promptText="mm/dd/yyyy" showWeekNumbers="true" />
+            <!--end of End date picker-->
+
+        <Label layoutX="116.0" layoutY="580.0" prefHeight="20.0" prefWidth="341.0" style="-fx-text-fill: #A9A9A9;" text="unsure about your end date? staff? leave it blank!">
+            <font>
+                <Font name="SansSerif Regular" size="15.0" />
+            </font>
+        </Label>
+        <CheckBox fx:id="termsConditionsCheckbox" layoutX="160.0" layoutY="648.0" mnemonicParsing="false" selected="true" style="-fx-text-fill: #A9A9A9;" text="I have read the Terms and Conditions">
+            <font>
+                <Font name="SansSerif Regular" size="15.0" />
+            </font>
+        </CheckBox>
+       <!-- registration button -->
+        <Button fx:id="registerButton" layoutX="230.0" layoutY="695.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="33.0" prefWidth="130.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Register">
+            <font>
+                <Font name="SansSerif Regular" size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="217.0" layoutY="741.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #A9A9A9;" text="Terms and Conditions" underline="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    <!-- End registration form -->
+    </children>
+</AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
