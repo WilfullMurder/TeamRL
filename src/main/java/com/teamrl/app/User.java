@@ -1,8 +1,6 @@
 package com.teamrl.app;
 //lead auth:JacobFarrow(20007972)
 
-import com.teamrl.app.components.UserInfoComponent;
-
 import java.util.ArrayList;
 
 
