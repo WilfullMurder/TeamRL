@@ -1,0 +1,721 @@
+[ {
+  "name" : "A_CHESS_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "LEdkyns@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ACTIVITIES_COMMITTEE",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "TQuatermaine@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "AFGHAN_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "MNokes@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "AFRICAN_CARIBBEAN_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "FOrgle@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ALE_BEER_CIDER_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "DKilpatrick@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ANIME_CLUB",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "ACampilyon@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "APPLIED_ARTIFICIAL_INTELLIGENCE_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "XDHoe@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ASSOCIATION_FOR_WOMEN_IN_COMPUTING",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "VTabourdeaux@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BAKING_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "DSelous@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BENGALI_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "EAinscough@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BIOMEDICAL_ENGINEERING_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "SBeesly@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BIOMEDICAL_SCIENCE_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "LZealand@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BOLLYWOOD_DANCE_STUDIO",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "WZehender@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BOLO_CROSSFIT_REHAB_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "XJeffcoat@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BRADFORD_OPTHALMIC_OPTICS_STUDENT_ASSOCIATION",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "AMewboorn@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BRADFORD_ASSOCIATION_OF_PHARMACY_STUDENTS",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "HYoxal@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BRADFORD_KUWAITI_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "FScantelberry@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BRADFORD_UNIVERSITY_START_UP_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "SJack@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BREADS_AND_SPREADS_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "IHowys@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BRITISH_RED_CROSS_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "JZealand@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "BRADFORD_UNIVERSITY_GAMING_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "JBaalham@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "CHEMICAL_ENGINEERING_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "HCampilyon@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "CHRISTIAN_UNION",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "TAlQanawati@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "CLINICAL_SCIENCES_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "KYapp@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "CROCHETING_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "EGaddesden@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "CULINARY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "JUlfe@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "DATA_SCIENCE_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "YRhavan@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ECONOMICS",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "JTabourdeaux@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "FILM_MAKING",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "SKehir@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "FIVE_A_SIDE",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "TNaggs@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "FORENSIC_AND_ARCHEOLOGICAL_SCIENCE_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "IKeough@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "GO_KARTING",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "YCaffyn@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "HENNA_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "VFaelor@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "HIKING_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "BKeough@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "HONG_KONG_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "RYair@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ICE_SKATING_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "BFaelor@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "INDIAN_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "CPhillipides@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "INTERNATIONAL_BUSINESS_AND_MANAGEMENT_ASSOCIATION",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "GHabatell@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ISLAMIC_AHLULBAYT_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "TDocwra@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ISLAMIC_THEOLOGY_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "YVanDer Bilt@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "ISLAMIC SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "COrgle@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "JAPANESE_CULTURE_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "JWackinshaw@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "JUI_JITSU",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "BWharfer@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "KASHMIR_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "PAinscough@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "KOREAN_CULTURE_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "SDHoe@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "KUWAIT_BRADFORD_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "TEdkyns@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "LAW_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "YQuestead@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "LGBTQ+_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "EPackman@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "MARKETING_ACADEMICS_PARACTITIONERS_AND_STUDENTS_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "TAinscough@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "MEDITATION_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "BKeough@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "MIDWIFERY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "WUlfe@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "MUSIC_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "WKilpatrick@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "NEWJOY_INTERNATIONAL_GOSPEL_CHURCH",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "MDuignan@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "NIGERIAN_STUDENTS_SOCIETY_BRADFORD",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "VKeough@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "NURSING_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "DMcCarty@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PAKISTAN_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "PTabb@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PARAMEDIC_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "HTabb@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PEACE_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "ZPhillipides@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PENSA_BRADFORD",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "NMaarafi@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "POSTGRADUATE_RESEARCH_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "YIsam@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PHOTOGRAPHY_CLUB",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "QJupp@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PHYSIOTHERAPY_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "CPuttuck@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PI_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "ENokes@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PLANT_BASED_VEGAN_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "AZacksfield@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "POETRY_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "JEyres@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "POKEMON_GO_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "VUdal@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PSYCHOLOGY_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "EKilpatrick@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "PUBLIC_HEALTH_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "LGhisnes@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "QUIZ_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "EHaide@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "RAMAIR_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "JQuestead@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "REDEEMED_STUDENTS_CHRISTIAN_FELLOWSHIP",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "MFernihaugh@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "SADAQAH_JARIYAH_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "TOystin@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "SAMBO_MARTIAL_ART",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "PHabatell@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "SCI-FI SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "FZealand@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "SELF_DEFENCE",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "KWackinshaw@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "SHUFFLEBOARD_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "JPackman@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "SOCIAL_JUSTICE_SOCIETY",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus proin nibh nisl condimentum id." ],
+  "mainContact" : "NMcCarty@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "SOCIETY_OF_FINTECH_STUDENTS",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "OAlQanawati@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "STARGAZING",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "YKilpatrick@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "STOMP_AND_CLAP_MAJORETTES",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "GDacre@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "SUSTAINABILITY_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "GGimblet@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "TABLE_TENNIS",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "DFitzharris@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "THE_BRADFORD_FOOSBALLERS",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "HRhavan@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "TIMBRE_GOSPEL",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "UChue@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "UBU_LISHI",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "MLickford@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "UBUTESTER",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "GZealand@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "VIDEO_GAMES_AND_ESPORTS_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "ANutt@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "VISUAL_ARTS_SOCIETY",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "VHertzbrunn@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "WINNER_STUDENT_FELLOWSHIP_FELLOWSHIP",
+  "description" : [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Nulla pellentesque dignissim enim sit amet. Tincidunt dui ut ornare lectus sit amet est. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Viverra aliquet eget sit amet tellus cras adipiscing enim." ],
+  "mainContact" : "PYair@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+}, {
+  "name" : "YA_LIFE",
+  "description" : [ "donec ultrices tincidunt arcu non" ],
+  "mainContact" : "BPedwardine@fakeEmail.ac.uk",
+  "location" : "Societies spaces",
+  "costPerSemester" : 3.0,
+  "costPerYear" : 5.0,
+  "externalLinks" : null
+} ]
