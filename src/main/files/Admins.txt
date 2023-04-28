@@ -1,0 +1,7 @@
+[ {
+  "myName" : null,
+  "myActivity" : "SELF_DEFENCE",
+  "role" : "Secretary",
+  "myActivityMembers" : [ "VedahQuirke", "WachiwiDocwra", "VivienneScantelberry", "OmakaCzentner", "MehitabelZehender", "SamyarShiloo", "CameliaKeough", "QiannaZacksfield", "SamiCampilyon", "ChristianKalwa", "VivienneRhavan", "JaanaMcCarty", "EkatrinaYapp", "CaitrionaghWilderspine", "TaaMaarafi", "ZeldaZacksfield", "ChenKehir", "DaenaFaelor", "RiekoUvedale", "ZeldaKeough", "KiranpalQuatermaine", "YoshiTabourdeaux", "VivienneShiloo", "OdettaUdal", "AmyCzentner", "PortiaQuirke", "WhitneyUvedale", "GabriellaDocwra", "RabiJupp", "PortiaKilpatrick" ],
+  "bannedList" : null
+} ]
