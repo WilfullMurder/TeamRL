@@ -9,6 +9,10 @@ import com.teamrl.app.User;
 import java.io.*;
 import java.util.ArrayList;
 
+//@TODO: write key:value --> mail:pass to separate file?
+//@TODO: write key:value --> tracker:pass to separate local file(db) for 'remember me'?
+    //@TODO: research different ways of tracking users; ip, location, cookies, etc.
+
 public class WriteComponent {
     //auth:JacobFarrow(20007972)
 

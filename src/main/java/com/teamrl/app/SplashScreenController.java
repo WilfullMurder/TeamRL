@@ -1,5 +1,5 @@
 package com.teamrl.app;
-
+//lead auth:JacobFarrow(20007972)
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,8 +20,21 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SplashScreenController implements Initializable {
+/**
+ * !WARNING! VOLATILE
+ * DON'T TOUCH THIS CODE!
+ * DON'T ADD IT INTO THE PROJECT!
+ * YOU DO NOT HAVE ENOUGH KNOWLEDGE OR EXPERIENCE TO DEAL WITH THIS!
+ * TALKING TO YOU JACOB!
+ * !WARNING! VOLATILE
+ * (bit dramatic, it works but I'm dubious about threads)
+ */
 
+//@TODO: sort layout
+//@TODO: fix loading bar and label
+//@TODO: more research on threads (GUI -> non-GUI, etc.)
+public class SplashScreenController implements Initializable {
+    //auth:JacobFarrow(20007972)
     @FXML
     private ImageView splashBGImageView;
     @FXML

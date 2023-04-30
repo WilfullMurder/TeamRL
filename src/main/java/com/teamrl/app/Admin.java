@@ -1,8 +1,7 @@
 package com.teamrl.app;
-
+//lead auth:JacobFarrow(20007972)
 import java.util.ArrayList;
 
-//lead auth:JacobFarrow(20007972)
 public class Admin {
     //auth:SadiyahZafhar(UB:22001015)
     private String myName;

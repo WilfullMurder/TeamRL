@@ -1,5 +1,5 @@
 package com.teamrl.app;
-
+//lead auth:JacobFarrow(20007972)
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -18,8 +18,9 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Locale;
-
+//@TODO: loads --> see Jacob
 public class HomeController {
+    //auth:JacobFarrow(20007972)
     @FXML
     private ScrollPane homeScrollPane;
     @FXML
