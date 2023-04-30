@@ -3,6 +3,7 @@ module com.teamrl.teamrlnew {
     requires javafx.fxml;
     requires com.fasterxml.jackson.core;
     requires com.fasterxml.jackson.databind;
+    requires java.logging;
 
 
     opens com.teamrl.app to javafx.fxml;

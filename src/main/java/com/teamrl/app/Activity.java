@@ -9,6 +9,7 @@ public class Activity {
     private ArrayList<String> description;
     private String mainContact;
     private String location;
+    private String time;
     private String costPerSemester;
     private String costPerYear;
     private ArrayList<String> externalLinks;
@@ -27,6 +28,17 @@ public class Activity {
         this.costPerYear=cpy;
         this.externalLinks=links;
     }
+    public Activity(String nom, ArrayList<String> desc,String contact, String loc, String time, String cps, String cpy, ArrayList<String> links){
+        this.name=nom;
+        this.description=desc;
+        this.mainContact=contact;
+        this.location=loc;
+        this.time=time;
+        this.costPerSemester=cps;
+        this.costPerYear=cpy;
+        this.externalLinks=links;
+    }
+
 
 
     public String getName() {
@@ -84,6 +96,12 @@ public class Activity {
     public void setExternalLinks(ArrayList<String> externalLinks) {
         this.externalLinks = externalLinks;
     }
+    public String getTime() {
+        return time;
+    }
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     @Override
     public String toString(){
@@ -92,9 +110,12 @@ public class Activity {
                 ", \"description\": " + String.format("\"%s\"", description) +
                 ", \"mainContact\":" + String.format("\"%s\"", mainContact) +
                 ", \"location\":" + String.format("\"%s\"", location) +
+                ", \"time\":" + String.format("\"%s\"", time) +
                 ", \"costPerSemester\":" + String.format("\"%s\"", costPerSemester) +
                 ", \"costPerYear\":" + String.format("\"%s\"", costPerYear) +
                 ", \"externalLinks\":" + String.format("\"%s\"", externalLinks) +
                 "}";
     }
+
+
 }
