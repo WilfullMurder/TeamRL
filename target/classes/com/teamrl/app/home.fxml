@@ -1,47 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.control.Label?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamrl.app.HomeController">
-    <!-- background img -->
-    <StackPane BorderPane.alignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-        <children>
-            <!-- Logo -->
-            <ImageView fx:id="homeBGImageView">
-                <image>
-                    <Image url="@img/background-solid.png" />
-                </image>
-            </ImageView>
-        </children>
-    </StackPane>
-    <AnchorPane fx:id="homeAnchorPane">
-        <Label fx:id="homeTitleLabel" layoutX="203.0" layoutY="1.0" prefHeight="57.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-text-fill: #24a0ed;" text="FIND A NEW ACTIVITY">
-            <font>
-                <Font name="SansSerif Regular" size="25.0" />
-            </font>
-        </Label>
-       <TabPane fx:id="homeTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
-         <tabs>
-           <Tab  fx:id="homeAZTab" text="A-Z">
-             <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-             </content>
-           </Tab>
-           <Tab fx:id="homeCatTab" text="Categories">
-             <content>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-             </content>
-           </Tab>
-         </tabs>
-       </TabPane>
-    </AnchorPane>
-</AnchorPane>
+<GridPane alignment="CENTER" hgap="2.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="2.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teamrl.app.HomeController">
+
+
+   <children>
+      <ScrollPane fx:id="homeScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowSpan="2147483647" GridPane.vgrow="ALWAYS">
+      </ScrollPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+<!--   <ImageView fx:id="homeBGImageView">-->
+<!--      <Image url="@img/background-solid.png"/>-->
+<!--   </ImageView>-->
+</GridPane>

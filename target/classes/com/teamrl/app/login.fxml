@@ -51,7 +51,7 @@
                     <Font size="15.0" />
                 </font>
             </Button>
-            <TextField fx:id="loginEmailTextField" layoutX="170.0" layoutY="309.0" prefHeight="30.0" prefWidth="300.0" promptText="Username / Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+            <TextField fx:id="loginEmailTextField" layoutX="170.0" layoutY="309.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
                 <font>
                     <Font name="SansSerif Regular" size="14.0" />
                 </font>
