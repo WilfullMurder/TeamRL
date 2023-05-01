@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/" xmlns="http://javafx.com/javafx/" fx:controller="com.teamrl.app.SingleActivityController">
+  <items>
+    <AnchorPane onMouseClicked="#onMouseClick" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox fx:id="singleActivityVBox" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox fx:id="singleActivityHBox1" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Name:" />
+                        <Label fx:id="nameTextLabel" layoutX="10.0" layoutY="10.0" text="Name:" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="singleActivityHBox2" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Description:" />
+                        <Label fx:id="descTextLabel" layoutX="10.0" layoutY="10.0" text="Description:" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="singleActivityHBox3" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Contact:" />
+                        <Label fx:id="contactTextLabel" layoutX="10.0" layoutY="10.0" text="Contact:" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="singleActivityHBox4" layoutX="10.0" layoutY="144.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Time:" />
+                        <Label fx:id="timeTextLabel" layoutX="10.0" layoutY="10.0" text="Time:" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="singleActivityHBox5" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Location:" />
+                        <Label fx:id="locTextLabel" layoutX="10.0" layoutY="10.0" text="Location:" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="singleActivityHBox6" layoutX="10.0" layoutY="170.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Links:" />
+                        <Label fx:id="linkTextLabel" layoutX="10.0" layoutY="10.0" text="Links:" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane fx:id="singleActivityImagePane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ImageView fx:id="singleActivityImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
