@@ -169,7 +169,7 @@ public class User {
 
 
     /**
-     *!!DEPRECATED!! use toString instead
+     *!!DEPRECATED!! use json formatting instead!
      * converts the class into csv format
      * @return formatted csv string
      */

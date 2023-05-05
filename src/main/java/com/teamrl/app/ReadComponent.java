@@ -12,9 +12,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-//@TODO: read key:value --> mail:pass mail separate file?
-//@TODO: read key:value --> mail:pass to separate local file for 'remember me'?
-
 public class ReadComponent {
     //auth:JacobFarrow(20007972)
     public static ArrayList<User> readUserDataFromJSON(String filename, String keyFolder)
@@ -120,3 +117,5 @@ public class ReadComponent {
         return data;
     }
 }
+//Comment your name under this here if you familiarized yourself with the codebase the fourth time Jacob asked:
+//Jacob

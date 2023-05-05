@@ -1,5 +1,5 @@
 package com.teamrl.app;
-//lead auth:JacobFarrow(20007972)
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,15 +20,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-//@TODO: a fair bit tbh....
-//@TODO: layout needs sorting
-//@TODO: functionality needs working out
 
-
-//I originally intended these to be loaded in as buttins on the home page
-//scenes don't work that way so this is the page that is loaded when a user has chosen to view an activity
 public class SingleActivityController extends SplitPane {
-    //auth:JacobFarrow(20007972)
+
     @FXML
     private VBox singleActivityVBox;
     @FXML

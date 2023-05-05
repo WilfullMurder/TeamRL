@@ -177,3 +177,6 @@ public class UserInfoComponent {
 
 
 }
+
+//Comment your name under this here if you familiarized yourself with the codebase the first time Jacob asked:
+//Jacob did

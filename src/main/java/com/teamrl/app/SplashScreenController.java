@@ -21,20 +21,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * !WARNING! VOLATILE
- * DON'T TOUCH THIS CODE!
- * DON'T ADD IT INTO THE PROJECT!
- * YOU DO NOT HAVE ENOUGH KNOWLEDGE OR EXPERIENCE TO DEAL WITH THIS!
- * TALKING TO YOU JACOB!
- * !WARNING! VOLATILE
- * (bit dramatic, it works but I'm dubious about threads)
+ * !WARNING!
+ * Do not mess with or try to implement this code!
+ * You aren't experienced or knowledgeable enough to mess with threads yet!
+ * Looking at you, Jacob!
+ * !WARNING!
  */
-
-//@TODO: sort layout
-//@TODO: fix loading bar and label
-//@TODO: more research on threads (GUI -> non-GUI, etc.)
 public class SplashScreenController implements Initializable {
-    //auth:JacobFarrow(20007972)
+//auth:JacobFarrow(20007972)
     @FXML
     private ImageView splashBGImageView;
     @FXML

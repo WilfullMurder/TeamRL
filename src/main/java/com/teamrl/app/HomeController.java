@@ -1,70 +1,68 @@
 package com.teamrl.app;
-//lead auth:JacobFarrow(20007972)
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Path;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+
 import java.util.ArrayList;
-import java.util.Locale;
-//@TODO: loads --> see Jacob
+
 public class HomeController {
-    //auth:JacobFarrow(20007972)
     @FXML
     private ScrollPane homeScrollPane;
+
     @FXML
-    private ImageView homeBGImageView;
+    private TableView<ActivityBrief> activityTableView;
+    @FXML
+    private TableColumn<ActivityBrief, ImageView> tblActivityIMGCol;
+    @FXML
+    private TableColumn<ActivityBrief, String> tblActivityNameCol;
+    @FXML
+    private TableColumn<ActivityBrief, String> tblActivityDescCol;
+    @FXML
+    private TableColumn<ActivityBrief, Button> tblActivityJoinCol;
 
 
     @FXML
     public void initialize(){
 
-//        homeBGImageView.setFitWidth(ScreenComponent.SCREEN_WIDTH);
-//        homeBGImageView.setFitHeight(ScreenComponent.SCREEN_HEIGHT);
-//        homeBGImageView.toBack();
-
-        homeScrollPane.setMinSize(ScreenComponent.SCREEN_WIDTH/1.5, ScreenComponent.SCREEN_HEIGHT/1.5);
-        homeScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
-        homeScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+        //grab the activity info
+        ArrayList<Activity> aList = ReadComponent.readActivityDataFromJSON(FileComponent.ACTIVITY_FILENAME, FileComponent.MAIN_FOLDER);
 
 
-        ColumnConstraints columnConstraints = new ColumnConstraints();
-        columnConstraints.setHgrow(Priority.NEVER);
-        columnConstraints.setPercentWidth(100.0);
+        ObservableList<ActivityBrief> activities = FXCollections.observableArrayList();
 
-        RowConstraints rowConstraints = new RowConstraints();
-        rowConstraints.setVgrow(Priority.NEVER);
-        rowConstraints.setPercentHeight(100.0);
+        for(int i = 0; i<aList.size();i++){
 
-        GridPane activityGrid = new GridPane();
-        activityGrid.getColumnConstraints().add(columnConstraints);
-        activityGrid.getRowConstraints().add(rowConstraints);
-        activityGrid.setGridLinesVisible(true);
-
-        activityGrid.addColumn(3);
-
-        ArrayList<Activity> activities = ReadComponent.readActivityDataFromJSON(FileComponent.ACTIVITY_FILENAME, FileComponent.MAIN_FOLDER);
-        activityGrid.addRow(activities.size());
-
-        for(int i =0; i<activities.size();i++){
-            SingleActivityController sac = new SingleActivityController(activities.get(i).getName());
-            int j = i% activityGrid.getColumnCount();
-            activityGrid.add(sac, j, i);
+            activities.add(new ActivityBrief("img-uri", aList.get(i).getName(), aList.get(i).getDescription().get(0)));
         }
 
-        homeScrollPane.setContent(activityGrid);
+
+
+
+
 
 
     }
+
+
+
+    class ActivityBrief{
+        private String img;
+        private String name;
+        private String desc;
+        private Button joinBtn;
+
+        public ActivityBrief(String i, String n, String d){
+            this.img=i;
+            this.name=n;
+            this.desc=d;
+            this.joinBtn = new Button("Join");
+
+        }
+
+    }
+
+
 }

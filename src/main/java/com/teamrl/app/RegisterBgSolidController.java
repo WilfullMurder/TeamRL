@@ -1,5 +1,5 @@
 package com.teamrl.app;
-//lead auth:JacobFarrow(20007972)
+
 import com.teamrl.app.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class RegisterBgSolidController {
-    // auth:JacobFarrow(20007972)
+
     @FXML
     private ImageView registerBGImageView;
     @FXML
@@ -25,7 +25,6 @@ public class RegisterBgSolidController {
     @FXML
     private TextField registerUOBTextField;
     @FXML //I feel like there is an email field that can do checks for valid emails?
-    //@TODO: check this out, replace with emailField if real
     private TextField registerEmailTextField;
     @FXML
     private PasswordField registerPasswordField;
@@ -54,8 +53,7 @@ public class RegisterBgSolidController {
 
     }
 
-    //@TODO: add the cancel button back to the screen
-    //@TODO: add in redirect to login screen
+
     public void onCancelButtonClick(ActionEvent actionEvent) {
     }
 
@@ -167,7 +165,6 @@ public class RegisterBgSolidController {
         return false;
     }
 
-    //@TODO: look into toast/notification classes
     //bad example
     private void toast(String error){
         //print an error msg to user

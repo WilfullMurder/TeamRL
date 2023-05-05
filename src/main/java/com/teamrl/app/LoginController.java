@@ -1,5 +1,5 @@
 package com.teamrl.app;
-//lead auth:JacobFarrow(20007972)
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,9 +17,8 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 
-//@TODO: sort remember me button --> SEE READ/WRITE COMPONENTS!
+
 public class LoginController {
-    //auth:JacobFarrow(20007972)
     @FXML
     private ImageView loginBGImageView;
     @FXML //I feel like there is an email field that can do checks for valid emails?
@@ -47,7 +46,7 @@ public class LoginController {
             User u = ReadComponent.findSingleUser(mail, FileComponent.USER_FILENAME, FileComponent.MAIN_FOLDER);
             if(u != null){
                 if(pass.equals(u.getPassword())){
-                    //we have user and matching pass so login
+                    //we have user so login
                     //@TODO: keep the user in some sort of session tracker for the profile page?
                     Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
                     try {
@@ -70,8 +69,6 @@ public class LoginController {
             throw new RuntimeException(e);
         }
     }
-
-    //@TODO: sort this out, just close the app
     public void onCancelButtonClick(ActionEvent actionEvent) {
     }
 
