@@ -1,25 +1,26 @@
-package com.example.teamRl;
-
+package com.teamrl.app;
+//lead auth:JacobFarrow(20007972)
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.teamrl.app.Activity;
+import com.teamrl.app.Admin;
+import com.teamrl.app.SuperUser;
+import com.teamrl.app.User;
 
 import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class WriteComponent {
+    //auth:JacobFarrow(20007972)
 
-
-    /**
-     * !DEPRECATED! Use writeUserDataToJSON or writeUserDataToJSONPretty
+     /** !DEPRECATED! Use writeUserDataToJSON or writeUserDataToJSONPretty
      * @param filename name of target file
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
     @Deprecated
-    public void writeUserDataToFile(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToFile(String filename, String keyFolder, ArrayList<User> data)
     {
-        File f = createFile(filename, keyFolder);
+        File f = FileComponent.createFile(filename, keyFolder);
         try{
             FileOutputStream fos = new FileOutputStream(f);
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
@@ -38,55 +39,71 @@ public class WriteComponent {
         }
     }
 
+
     /**
      *
      * @param filename name of target file
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public void writeUserDataToJSON(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToJSON(String filename, String keyFolder, ArrayList<User> data)
     {
-        File target = createFile(filename, keyFolder);
+        ArrayList<UserInfoComponent> ui =convertUserData(data);
+        File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();
         try {
-            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, ui);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
     /**
      *
      * @param filename name of target file
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
     {
-        File target = createFile(filename, keyFolder);
+        ArrayList<UserInfoComponent> ui = convertUserData(data);
+        File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();
         try {
-            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, ui);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
+    public static void updateUser(UserInfoComponent uic, ArrayList<User> data){
+       ArrayList<User> newData = data;
+        for(int i =0; i < data.size(); i++){
+            if(uic.getUobNumber().equals(data.get(i).getUobNumber())){
+                newData.get(i).setMyInfo(uic);
+            }
+        }
+        writeUserDataToJSONPretty(FileComponent.USER_FILENAME, FileComponent.MAIN_FOLDER, newData);
+    }
+
     /**
      *
      * @param filename name of target file
      * @param keyFolder name of target folder
      * @param data ArrayList of User class
      */
-    public void writeUserDataToCSV(String filename, String keyFolder, ArrayList<User> data)
+    public static void writeUserDataToCSV(String filename, String keyFolder, ArrayList<User> data)
     {
-        File f = createFile(filename, keyFolder);
+        ArrayList<UserInfoComponent> ui = convertUserData(data);
+        File f = FileComponent.createFile(filename, keyFolder);
         try{
             FileOutputStream fos = new FileOutputStream(f);
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
             bw.write("surname,forename,uob_number,email,DOB,startYear,endYear");
             bw.newLine();
-            for(int i =0; i< data.size(); i++)
+            for(int i =0; i< ui.size(); i++)
             {
-                bw.write(data.get(i).toCSV());
+                bw.write(ui.get(i).toCSV());
                 bw.newLine();
             }
             bw.close();
@@ -96,33 +113,24 @@ public class WriteComponent {
         }
     }
 
-    //work on this
-    public void writeAdminDataToJSON(String filename, String keyFolder, ArrayList<User> data)
-    {
-        File f = createFile(filename, keyFolder);
-        try{
-            FileOutputStream fos = new FileOutputStream(f);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
-            bw.write("[" );
-            for(int i =0; i< data.size(); i++)
-            {
-                bw.write(data.get(i).toJSON());
-                if(i<data.size()-1){bw.write(",");}
-                bw.newLine();
-            }
-            bw.write("]");
-            bw.close();
-        } catch (IOException e)
+    public static ArrayList<UserInfoComponent> convertUserData(ArrayList<User> data){
+        ArrayList<UserInfoComponent> ui = new ArrayList<>();
+        for(int i = 0; i< data.size(); i++)
         {
-            throw new RuntimeException(e);
+            ui.add(data.get(i).getMyInfo());
         }
+        return ui;
     }
 
-
-
-    public void writeAdminDataToJSONPretty(String filename, String keyFolder, ArrayList<User> data)
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @param data ArrayList of User class
+     */
+    public static void writeAdminDataToJSONPretty(String filename, String keyFolder, ArrayList<Admin> data)
     {
-        File target = createFile(filename, keyFolder);
+        File target = FileComponent.createFile(filename, keyFolder);
         ObjectMapper mapper = new ObjectMapper();
         try {
             mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
@@ -130,50 +138,39 @@ public class WriteComponent {
             throw new RuntimeException(e);
         }
     }
-
-
-
     /**
      *
      * @param filename name of target file
      * @param keyFolder name of target folder
-     * @return the path of the target file
+     * @param data ArrayList of User class
      */
-    private String getFilePath(String filename, String keyFolder)
+    public static void writeSuperDataToJSONPretty(String filename, String keyFolder, ArrayList<SuperUser> data)
     {
-        Path p = Paths.get("");
-        String s = p.toAbsolutePath().toString();
-        s+= "\\src\\";
-        s+= keyFolder;
-        s+= "\\java\\com\\example\\teamRL\\";
-        s+=filename;
-        return s;
-    }
-
-    /**
-     * create a new file if the file in question does not exist
-     * @param fileName target file
-     * @param keyFolder target folder
-     * @return the file in question
-     */
-    private File createFile(String fileName, String keyFolder)
-    {
-        String path = getFilePath(fileName, keyFolder);
-        File f = new File(path);
-
-        try{
-            if(!f.exists())
-            {
-                f.createNewFile();
-                System.out.println("File " + f.getName() + " created"); //change to log
-            }
-            else{
-                System.out.println("File " + f.getName() + " already exists. File will be overwritten"); //change to log
-            }
-        }catch(IOException e)
-        {
-            e.printStackTrace(); //change to log
+        File target = FileComponent.createFile(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        return f;
+    }
+    /**
+     *
+     * @param filename name of target file
+     * @param keyFolder name of target folder
+     * @param data ArrayList of User class
+     */
+    public static void writeActivityDataToJSONPretty(String filename, String keyFolder, ArrayList<Activity> data)
+    {
+        File target = FileComponent.createFile(filename, keyFolder);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(target, data);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
+
+//Comment your name under this here if you familiarized yourself with the codebase the third time Jacob asked:
+//Jacob

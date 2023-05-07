@@ -1,76 +1,51 @@
+package com.teamrl.app;
 //lead auth:JacobFarrow(20007972)
-package com.example.teamRl;
-
 import java.util.ArrayList;
+
 
 public class SuperUser {
     //auth:AbuMughal(22036538)
-    private ArrayList<User> adminList;
-    private ArrayList<Activity> activityList;
 
-    public SuperUser() {
+    private String myUoB;
+    private ArrayList<String> adminList;
+    private ArrayList<String> activitiesList;
+
+    public SuperUser(){}
+
+    public SuperUser(ArrayList<String> admins, ArrayList<String> activities){
+        this.adminList=admins;
+        this.activitiesList=activities;
+    }
+    public SuperUser(String uob, ArrayList<String> admins, ArrayList<String> activities){
+        this.myUoB = uob;
+        this.adminList=admins;
+        this.activitiesList=activities;
     }
 
-    public ArrayList<User> getAdminList() {
-        return this.adminList;
+    public ArrayList<String> getAdminList() {
+        return adminList;
     }
 
-    public void setAdminList(ArrayList<User> adminList)
-    {
+    public void setAdminList(ArrayList<String> adminList) {
         this.adminList = adminList;
     }
 
-    public User getAdmin(int index) {
-        return this.adminList.get(index);
+    public ArrayList<String> getActivitiesList() {
+        return activitiesList;
     }
 
-    public void addNewAdmin(User u) {
-        //We can make this private and call from grantAdminRights?
-        if (u.getAdmin() != null && !this.adminList.contains(u)) {
-            this.adminList.add(u);
-        }
+    public void setActivitiesList(ArrayList<String> activitiesList) {
+        this.activitiesList = activitiesList;
     }
 
-    public void removeAdmin(User u) {
-        if (u.getAdmin() != null && this.adminList.contains(u)) {
-            this.adminList.remove(u);
-        }
+    @Override
+    public String toString(){
+        return
+        "\"adminList\":" + String.format("\"%s\"", adminList) +
+        ", \"activitiesList\":" + String.format("\"%s\"", activitiesList);
     }
 
-    public void grantAdminRights(User u) {
-        //We can make this private and call from addNewAdmin?
-        if (u.getAdmin() == null) {
-            //load admin info
-            u.setAdmin(new Admin());
-            addNewAdmin(u);
-        }
-    }
-
-    public String toString()
-    {
-        return  "[\"activities\": {" + String.format("\"%s\"", activitiesToJson()) + "\n" +
-                ",\"admins\": {" + String.format("\"%s\"", adminsToJson()) + "\n" +
-                "}]";
-    }
-
-
-    private String activitiesToJson()
-    {
-        String s = "";
-        for(int i = 0; i< this.activityList.size(); i++)
-         {
-             s+= this.activityList.get(i).toString();
-         }
-        return s;
-    }
-
-    private String adminsToJson()
-    {
-        String s = "";
-        for(int i = 0; i< this.adminList.size(); i++)
-        {
-            s+= this.adminList.get(i).toString();
-        }
-        return s;
+    public String getMyUoB() {
+        return myUoB;
     }
 }

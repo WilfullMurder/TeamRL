@@ -1,75 +1,108 @@
-//lead auth:JacobFarrow(20007972)
-package com.example.teamRl;
+package com.teamrl.app;
 
 import java.util.ArrayList;
 
+//lead auth:JacobFarrow(20007972)
 public class Admin {
     //auth:SadiyahZafhar(UB:22001015)
-    private ArrayList<User> members;
-    private Activity myActivity;
+    private String myName;
+    private String myActivity;
+    private String role;
+    private ArrayList<String> myActivityMembers; //just the full names of members for searching db
+    private ArrayList<String> bannedList; //just in case
 
-    public Admin() {
-        members = new ArrayList<>();
+    public Admin(){
+        this.myActivityMembers=new ArrayList<>();
+        this.bannedList=new ArrayList<>();
+        this.myActivity="";
     }
 
-    public ArrayList<User> getMembers() {
-        return this.members;
+    public Admin(String a, ArrayList<String>data){
+        this.myActivity=a;
+        this.myActivityMembers=data;
+        this.bannedList=new ArrayList<>();
+    }
+    public Admin(String a, ArrayList<String>data, ArrayList<String> banned){
+        this.myActivity=a;
+        this.myActivityMembers=data;
+        this.bannedList=banned;
+    }
+    public Admin(String a, String r, ArrayList<String>data, ArrayList<String> banned){
+        this.myActivity=a;
+        this.role=r;
+        this.myActivityMembers=data;
+        this.bannedList=banned;
     }
 
-    public void setMembers(ArrayList<User> members) {
-        this.members = members;
+    public Admin(String n, String a, String r, ArrayList<String>data, ArrayList<String> banned){
+        this.myName=n;
+        this.myActivity=a;
+        this.role=r;
+        this.myActivityMembers=data;
+        this.bannedList=banned;
     }
-
-    public User getMember(int index) {
-        return this.members.get(index);
-    }
-    public User getMember(String surname) {
-        for(int i =0; i < this.members.size(); i++)
-        {
-            User u = this.members.get(i);
-            String s = u.getSurname();
-            if(s.equals(surname))
-            {
-                return this.members.get(i);
-            }
-
-        }
-        return null;
-    }
-
-    public void addMember(User newMember) {
-        this.members.add(newMember);
-    }
-
-    public Activity getMyActivity() {
+    public String getMyActivity() {
         return myActivity;
     }
 
-    public void setMyActivity(Activity a) {
-        myActivity = a;
+    public void setMyActivity(String myActivity) {
+        this.myActivity = myActivity;
     }
 
-    public String toString()
-    {
-        return  "[\"activity\":" + String.format("\"%s\"", activityToJSON()) + "\n" +
-                ",\"members\":" + membersToJSON() +
-                "}]";
+    public ArrayList<String> getMyActivityMembers() {
+        return myActivityMembers;
     }
 
-    private String membersToJSON()
-    {
-        String s="";
-        for(int i = 0; i<this.members.size(); i++)
-        {
-            if(i == this.members.size()-1){s+= this.members.get(i).toJSON() + "\n"; break;}
-            s+= this.members.get(i).toJSON() + "," + "\n";
+    public void setMyActivityMembers(ArrayList<String> myActivityMembers) {
+        this.myActivityMembers = myActivityMembers;
+    }
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getMyName() {
+        return myName;
+    }
+
+    public void setMyName(String myName) {
+        this.myName = myName;
+    }
+
+    public void addNewMember(String m){
+        if(!this.myActivityMembers.contains(m)){
+            this.myActivityMembers.add(m);
         }
-        return s;
     }
 
-    private String activityToJSON()
-    {
-
-        return this.myActivity.toString();
+    public ArrayList<String> getBannedList() {
+        return bannedList;
     }
+
+    public void setBannedList(ArrayList<String> bannedList) {
+        this.bannedList = bannedList;
+    }
+
+    public void removeMember(String m, boolean banned){
+        if(this.myActivityMembers.contains(m)){
+            this.myActivityMembers.remove(m);
+        }
+        if(banned){
+            this.bannedList.add(m);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return  String.format("\"%s\"", myName)+
+                ": {\"myActivity\":" + String.format("\"%s\"", myActivity) +
+                ", \"myActivityMembers\":" + String.format("\"%s\"", myActivityMembers) +
+                ", \"bannedList\":" + String.format("\"%s\"",bannedList) +
+                '}';
+    }
+
+
 }

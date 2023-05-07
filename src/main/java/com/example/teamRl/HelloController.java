@@ -1,4 +1,4 @@
-package com.example.teamRl;
+package com.teamrl.app;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
