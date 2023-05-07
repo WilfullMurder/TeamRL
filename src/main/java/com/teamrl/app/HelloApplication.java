@@ -1,15 +1,13 @@
 package com.teamrl.app;
 //lead auth:JacobFarrow(20007972)
+import com.teamrl.app.controllers.SingleActivityController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class HelloApplication extends Application {
 //auth:JacobFarrow(20007972)
