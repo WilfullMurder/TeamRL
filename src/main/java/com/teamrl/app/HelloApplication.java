@@ -33,10 +33,7 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-
-        DataGenerator DG = new DataGenerator();
-        WriteComponent.writeUserDataToJSONPretty(FileComponent.USER_FILENAME, FileComponent.MAIN_FOLDER, DG.generateUserData(30));
-//        launch();
+        launch();
     }
 
     /**!WARNING! Needs a bunch of work so don't touch unless you fancy doing some refactoring!**/
