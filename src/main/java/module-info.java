@@ -1,4 +1,4 @@
-module com.teamrl.teamrlnew {
+module com.teamrl.teamrl{
     requires javafx.controls;
     requires javafx.fxml;
     requires com.fasterxml.jackson.core;
@@ -6,7 +6,7 @@ module com.teamrl.teamrlnew {
     requires java.logging;
 
 
-    opens com.teamrl.app to javafx.fxml;
+    opens com.teamrl.app to javafx.fxml, javafx.base;
     exports com.teamrl.app to javafx.graphics, com.fasterxml.jackson, com.fasterxml.jackson.databind;
 
 }
