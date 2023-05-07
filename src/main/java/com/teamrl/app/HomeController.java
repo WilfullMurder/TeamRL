@@ -89,7 +89,7 @@ public class HomeController {
         ObservableList<ActivityBrief> activities = FXCollections.observableArrayList();
 
         for(int i = 0; i<activityList.size();i++){
-            activities.add(new ActivityBrief("img-uri", activityList.get(i).getName(), activityList.get(i).getDescription().get(0), new Button("join")));
+            activities.add(new ActivityBrief("img-uri", activityList.get(i).getParsedName(), activityList.get(i).getDescription().get(0), new Button("join")));
         }
         activityTableView.setItems(activities);
         activityTableView.refresh();
@@ -113,13 +113,15 @@ public class HomeController {
             Stage stage = (Stage) node.getScene().getWindow();
 
             ActivityBrief ab = activityTableView.getSelectionModel().getSelectedItem();
-            Activity selectedActivity= new Activity();
+
 
             //try and load the selected activity as a single activity
             try{
+                Activity selectedActivity = new Activity();
                 for(int i =0; i< activityList.size(); i++){
-                 if(activityList.get(i).getName().equals(ab.getName())){
+                 if(activityList.get(i).getParsedName().equals(ab.getName())){
                     selectedActivity=activityList.get(i);
+                    System.out.println("found activity!");
                     break;
                  }
                 }

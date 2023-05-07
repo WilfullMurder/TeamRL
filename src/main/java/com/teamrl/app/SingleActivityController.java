@@ -4,23 +4,18 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Parent;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Objects;
-import java.util.ResourceBundle;
 
 import static com.teamrl.app.HelloApplication.currentSession;
 
@@ -28,9 +23,13 @@ public class SingleActivityController extends SplitPane {
 //auth:JacobFarrow(20007972)
 
     @FXML
-    private AnchorPane singleActivityAnchorPane;
+    private BorderPane singleActivityBorderPane;
+    @FXML
+    private AnchorPane homeHeaderAnchorPane;
     @FXML
     private SplitPane singleActivitySplitPane;
+    @FXML
+    private SplitPane singleActivitySplitPaneInner;
     @FXML
     private VBox singleActivityVBox;
     @FXML
@@ -47,6 +46,8 @@ public class SingleActivityController extends SplitPane {
     private HBox singleActivityHBoxLinks;
     @FXML
     private Label nameTextLabel;
+    @FXML
+    private Text headerTitleText;
     @FXML
     private Text descTextLabel;
     @FXML
@@ -67,11 +68,23 @@ public class SingleActivityController extends SplitPane {
     private AnchorPane singleActivityImagePane;
     @FXML
     private Button joinBtn;
+    @FXML
+    private Button profileBtn;
+    @FXML
+    private Button signOutBtn;
+    @FXML
+    private Button homeBtn;
+
+
 
     //@TODO: pass the signed in user so we can check if they are already a member, hide the joinbtn, show leavebtn?
     private Activity myActivity;
 
     public SingleActivityController(){}
+
+    public SingleActivityController(Activity a){
+        this.myActivity=a;
+    }
 
 
     //@TODO: sort out header
@@ -82,84 +95,93 @@ public class SingleActivityController extends SplitPane {
         /**We could have a bunch of different backgrounds/colour schemes and load them in statically from the resource folder?**/
         BackgroundSize bgs = new BackgroundSize(ScreenComponent.SCREEN_WIDTH, ScreenComponent.SCREEN_HEIGHT, false, false, false, false);
         Background bg = new Background(new BackgroundImage(new Image(getClass().getResource("img/background-solid.png").toExternalForm()), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, bgs));
-        singleActivityAnchorPane.setBackground(bg);
+        singleActivityBorderPane.setBackground(bg);
 
-        singleActivityAnchorPane.setMinSize(ScreenComponent.SCREEN_WIDTH,ScreenComponent.SCREEN_HEIGHT);
-        singleActivityAnchorPane.setPrefWidth(ScreenComponent.SCREEN_WIDTH);
-        singleActivityAnchorPane.setPrefHeight(ScreenComponent.SCREEN_HEIGHT);
+        double screenHalfWidth = ScreenComponent.SCREEN_WIDTH/2;
+        double screenHalfHeight = ScreenComponent.SCREEN_HEIGHT/2;
 
-        singleActivitySplitPane.setPrefWidth((singleActivityAnchorPane.getPrefWidth()/2));
-        singleActivitySplitPane.setPrefHeight(singleActivityAnchorPane.getPrefHeight()/1.5);
-        singleActivitySplitPane.setLayoutX((ScreenComponent.SCREEN_WIDTH/2)-(singleActivitySplitPane.getPrefWidth()/2));
-        singleActivitySplitPane.setLayoutY((ScreenComponent.SCREEN_HEIGHT/2)-(singleActivitySplitPane.getPrefHeight()/2));
+        singleActivityBorderPane.setMinSize(ScreenComponent.SCREEN_WIDTH,ScreenComponent.SCREEN_HEIGHT);
+        singleActivityBorderPane.setPrefWidth(ScreenComponent.SCREEN_WIDTH);
+        singleActivityBorderPane.setPrefHeight(ScreenComponent.SCREEN_HEIGHT);
 
-        if(myActivity != null) {
-            nameTextLabel.setText(myActivity.getName());
-            contactTextLabel.setText(myActivity.getMainContact());
-            cpsTextLabel.setText(myActivity.getCostPerSemester());
-            cpyTextLabel.setText(myActivity.getCostPerYear());
+        singleActivitySplitPane.setPrefWidth(screenHalfWidth);
+        singleActivitySplitPane.setPrefHeight(singleActivityBorderPane.getPrefHeight()/1.5);
+        singleActivitySplitPane.setLayoutX((screenHalfWidth)-(singleActivitySplitPane.getPrefWidth()/2));
+        singleActivitySplitPane.setLayoutY((screenHalfHeight)-(singleActivitySplitPane.getPrefHeight()/2));
 
-            if(myActivity.getTime() == null){timeTextLabel.setText("tbd");}
-            else { timeTextLabel.setText(myActivity.getTime());}
+        double tableHalfWidth = singleActivitySplitPane.getPrefWidth()/2;
 
-            locTextLabel.setText(myActivity.getLocation());
-            String d = "";
-            for(int i =0; i< myActivity.getDescription().size(); i++){
-                d+=myActivity.getDescription().get(i);
-            }
-            descTextLabel.setText(d);
+        headerTitleText.setText(myActivity.getParsedName());
+        headerTitleText.setLayoutY(0 + headerTitleText.getLayoutBounds().getHeight()*1.2);
+        headerTitleText.setLayoutX((screenHalfWidth)-(headerTitleText.getLayoutBounds().getWidth()/2));
 
-            //@TODO: create working links for external redirection
-            d="link.com";
-            if(myActivity.getExternalLinks() != null) {
-                for (int i = 0; i < myActivity.getExternalLinks().size(); i++) {
-                    d += myActivity.getExternalLinks().get(i);
-                }
-            }
-            linkTextLabel.setText(d);
+        homeHeaderAnchorPane.setLayoutX(screenHalfWidth-tableHalfWidth);
+        homeHeaderAnchorPane.setPrefHeight(headerTitleText.getLayoutBounds().getHeight());
 
-            if(currentSession.getSessionUser() == null){
-                System.out.println("session user is null bro");
-            }
-            else{
-                ArrayList<String> userActs = currentSession.getSessionUser().getMyActivities();
-                if(userActs != null && userActs.size() > 0){
-                    for(String s : userActs){
-                        if(s.equals(myActivity.getName())){
-                            joinBtn.setText("Leave");
-                        }
-                    }
-                }
-                else{
-                    joinBtn.setText("Join");
-                }
-            }
+        profileBtn.setAlignment(Pos.CENTER);
+        profileBtn.setLayoutX((ScreenComponent.SCREEN_WIDTH/2)-(headerTitleText.getLayoutBounds().getWidth()+profileBtn.getWidth()));
 
+        signOutBtn.setAlignment(Pos.CENTER);
+        signOutBtn.setLayoutX((ScreenComponent.SCREEN_WIDTH/2)+(headerTitleText.getLayoutBounds().getWidth()+signOutBtn.getWidth()));
 
-            /**we should probably check if the current user is not already a member and deal with that**/
-            //@TODO:work out how to add on mouse clicked --> (use btn onPress or smt?)
+        homeBtn.setAlignment(Pos.CENTER);
+        homeBtn.setLayoutX(headerTitleText.getLayoutX()+(headerTitleText.getLayoutBounds().getWidth()/2));
+        homeBtn.setLayoutY(headerTitleText.getLayoutY()+25.0);
 
-            switch(joinBtn.getText()){
-                case "Join":
-                default:
-                    joinBtn.setOnAction(new EventHandler<ActionEvent>() {
-                        @Override
-                        public void handle(ActionEvent actionEvent) {
-                            joinActivity(myActivity.getName());
-                        }
-                    });
-                    break;
-                case "Leave":
-                    joinBtn.setOnAction(new EventHandler<ActionEvent>() {
-                        @Override
-                        public void handle(ActionEvent actionEvent) {
-                            leaveActivity(myActivity.getName());
-                        }
-                    });
-                    break;
-            }
+        nameTextLabel.setText(myActivity.getName());
+        contactTextLabel.setText(myActivity.getMainContact());
+        cpsTextLabel.setText(myActivity.getCostPerSemester());
+        cpyTextLabel.setText(myActivity.getCostPerYear());
 
+        if(myActivity.getTime() == null){timeTextLabel.setText("tbd");}
+        else { timeTextLabel.setText(myActivity.getTime());}
+
+        locTextLabel.setText(myActivity.getLocation());
+        String d = "";
+        for(int i =0; i< myActivity.getDescription().size(); i++){
+            d+=myActivity.getDescription().get(i);
         }
+        descTextLabel.setText(d);
+
+        //@TODO: create working links for external redirection
+        d="link.com";
+        if(myActivity.getExternalLinks() != null) {
+            for (int i = 0; i < myActivity.getExternalLinks().size(); i++) {
+                d += myActivity.getExternalLinks().get(i);
+            }
+        }
+        linkTextLabel.setText(d);
+
+        setButtonText();
+
+        /**we should probably check if the current user is not already a member and deal with that**/
+        switch(joinBtn.getText()){
+            case "Join":
+            default:
+                joinBtn.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent actionEvent) {
+                        joinActivity(myActivity.getName());
+                    }
+                });
+                break;
+            case "Leave":
+                joinBtn.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent actionEvent) {
+                        leaveActivity(myActivity.getName());
+                    }
+                });
+                break;
+        }
+
+        homeBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                redirectToHome(actionEvent);
+            }
+        });
+
     }
 
 //@TODO: add current user to activity
@@ -169,6 +191,7 @@ public class SingleActivityController extends SplitPane {
         if(u != null){
             u.addActivity(act);
             WriteComponent.updateUser(u.getMyInfo(), ReadComponent.readUserDataFromJSON(FileComponent.USER_FILENAME, FileComponent.MAIN_FOLDER));
+            setButtonText();
         }
     }
 
@@ -178,6 +201,7 @@ public class SingleActivityController extends SplitPane {
         if(u != null){
             u.removeActivity(act);
             WriteComponent.updateUser(u.getMyInfo(), ReadComponent.readUserDataFromJSON(FileComponent.USER_FILENAME, FileComponent.MAIN_FOLDER));
+            setButtonText();
         }
     }
 
@@ -189,4 +213,38 @@ public class SingleActivityController extends SplitPane {
     public void setMyActivity(Activity myActivity) {
         this.myActivity = myActivity;
     }
+
+    private void setButtonText(){
+        ArrayList<String> userActs = currentSession.getSessionUser().getMyActivities();
+        if(userActs != null && userActs.size() > 0){
+            for(String s : userActs){
+                if(s.equals(myActivity.getName())){
+                    joinBtn.setText("Leave");
+                }
+            }
+        }
+        else{
+            joinBtn.setText("Join");
+        }
+    }
+
+    private void redirectToHome(ActionEvent event){
+        //try and load the home page
+        Node node=(Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        try{
+
+            //@TODO: move this out into HelloApplication? --> static func for redirecting scenes?
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home-2.fxml"));
+            HomeController hc= new HomeController();
+            fxmlLoader.setController(hc);
+            stage.setScene(new Scene(fxmlLoader.load()));
+            stage.show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

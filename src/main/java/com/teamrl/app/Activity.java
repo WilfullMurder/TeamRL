@@ -1,6 +1,7 @@
 package com.teamrl.app;
 //lead auth:JacobFarrow(20007972)
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class Activity {
@@ -50,6 +51,20 @@ public class Activity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getParsedName(){
+        String p = "";
+
+        for(int i=0; i<name.length();i++){
+            if(name.charAt(i) != '_'){
+                p+=name.charAt(i);
+            }
+            else{
+                p+= " ";
+            }
+        }
+        return p;
     }
 
     public ArrayList<String> getDescription() {
