@@ -6,7 +6,7 @@ module com.teamrl.teamrl{
     requires java.logging;
 
 
-    opens com.teamrl.app to javafx.fxml, javafx.base;
+    opens com.teamrl.app to javafx.fxml, javafx.base,com.fasterxml.jackson, com.fasterxml.jackson.databind;
     exports com.teamrl.app to javafx.graphics, com.fasterxml.jackson, com.fasterxml.jackson.databind;
 
 }
