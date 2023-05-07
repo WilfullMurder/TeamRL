@@ -9,6 +9,7 @@
   "endYear" : "2026",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1985-06-20"
 }, {
   "surname" : "Ainscough",
@@ -21,6 +22,7 @@
   "endYear" : "",
   "adminFlag" : false,
   "superFlag" : true,
+  "myActivities" : null,
   "dob" : "1988-01-10"
 }, {
   "surname" : "Ainscough",
@@ -33,6 +35,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1967-12-25"
 }, {
   "surname" : "Baalham",
@@ -45,6 +48,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1987-02-9"
 }, {
   "surname" : "Campilyon",
@@ -57,6 +61,7 @@
   "endYear" : "2025",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1974-04-12"
 }, {
   "surname" : "Eabry",
@@ -69,6 +74,7 @@
   "endYear" : "2026",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "2005-02-15"
 }, {
   "surname" : "Edkyns",
@@ -81,6 +87,7 @@
   "endYear" : "2026",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1975-07-16"
 }, {
   "surname" : "Faelor",
@@ -93,6 +100,7 @@
   "endYear" : "",
   "adminFlag" : false,
   "superFlag" : true,
+  "myActivities" : null,
   "dob" : "1967-04-22"
 }, {
   "surname" : "Habatell",
@@ -105,6 +113,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1985-04-6"
 }, {
   "surname" : "Hertzbrunn",
@@ -117,6 +126,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1985-02-18"
 }, {
   "surname" : "Jeffcoat",
@@ -129,6 +139,7 @@
   "endYear" : "2024",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1987-07-20"
 }, {
   "surname" : "Le Lean",
@@ -141,6 +152,7 @@
   "endYear" : "2027",
   "adminFlag" : true,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "2006-03-2"
 }, {
   "surname" : "Maarafi",
@@ -153,6 +165,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1980-08-29"
 }, {
   "surname" : "McCarty",
@@ -165,6 +178,7 @@
   "endYear" : "",
   "adminFlag" : false,
   "superFlag" : true,
+  "myActivities" : null,
   "dob" : "1952-09-13"
 }, {
   "surname" : "Naggs",
@@ -177,6 +191,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1977-12-12"
 }, {
   "surname" : "Orgle",
@@ -189,6 +204,7 @@
   "endYear" : "2025",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1988-07-2"
 }, {
   "surname" : "Pedwardine",
@@ -201,6 +217,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1977-10-29"
 }, {
   "surname" : "Phillipides",
@@ -213,6 +230,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1997-09-6"
 }, {
   "surname" : "Realf",
@@ -225,6 +243,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1954-06-15"
 }, {
   "surname" : "Roandeau",
@@ -237,6 +256,7 @@
   "endYear" : "2025",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "2001-03-10"
 }, {
   "surname" : "Tabourdeaux",
@@ -249,6 +269,7 @@
   "endYear" : "2025",
   "adminFlag" : true,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1966-12-21"
 }, {
   "surname" : "Tabourdeaux",
@@ -261,18 +282,20 @@
   "endYear" : "",
   "adminFlag" : false,
   "superFlag" : true,
+  "myActivities" : null,
   "dob" : "1950-03-19"
 }, {
   "surname" : "Test",
   "forename" : "Registration",
   "fullname" : "Registration Test",
   "uobNumber" : "test",
-  "email" : "test@registration.com",
+  "email" : "test",
   "password" : "test",
   "startYear" : "2023",
   "endYear" : "2023",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : [ ],
   "dob" : "2023-04-27"
 }, {
   "surname" : "Viccermane",
@@ -285,6 +308,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1996-03-23"
 }, {
   "surname" : "Wharfer",
@@ -297,6 +321,7 @@
   "endYear" : "",
   "adminFlag" : false,
   "superFlag" : true,
+  "myActivities" : null,
   "dob" : "1997-07-18"
 }, {
   "surname" : "Wilderspine",
@@ -309,6 +334,7 @@
   "endYear" : "2025",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1984-09-24"
 }, {
   "surname" : "Yair",
@@ -321,6 +347,7 @@
   "endYear" : "2026",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1972-06-27"
 }, {
   "surname" : "Yair",
@@ -333,6 +360,7 @@
   "endYear" : "",
   "adminFlag" : false,
   "superFlag" : true,
+  "myActivities" : null,
   "dob" : "1979-01-31"
 }, {
   "surname" : "Zealand",
@@ -345,6 +373,7 @@
   "endYear" : "2027",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1978-07-4"
 }, {
   "surname" : "Zehender",
@@ -357,6 +386,7 @@
   "endYear" : "2024",
   "adminFlag" : false,
   "superFlag" : false,
+  "myActivities" : null,
   "dob" : "1964-07-5"
 }, {
   "surname" : "Zionzee",
@@ -369,5 +399,6 @@
   "endYear" : "",
   "adminFlag" : false,
   "superFlag" : true,
+  "myActivities" : null,
   "dob" : "1970-09-27"
 } ]
