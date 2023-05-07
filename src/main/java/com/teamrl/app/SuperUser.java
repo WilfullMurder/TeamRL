@@ -6,12 +6,18 @@ import java.util.ArrayList;
 public class SuperUser {
     //auth:AbuMughal(22036538)
 
+    private String myUoB;
     private ArrayList<String> adminList;
     private ArrayList<String> activitiesList;
 
     public SuperUser(){}
 
     public SuperUser(ArrayList<String> admins, ArrayList<String> activities){
+        this.adminList=admins;
+        this.activitiesList=activities;
+    }
+    public SuperUser(String uob, ArrayList<String> admins, ArrayList<String> activities){
+        this.myUoB = uob;
         this.adminList=admins;
         this.activitiesList=activities;
     }
@@ -37,5 +43,9 @@ public class SuperUser {
         return
         "\"adminList\":" + String.format("\"%s\"", adminList) +
         ", \"activitiesList\":" + String.format("\"%s\"", activitiesList);
+    }
+
+    public String getMyUoB() {
+        return myUoB;
     }
 }

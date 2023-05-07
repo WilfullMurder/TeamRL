@@ -1,6 +1,8 @@
 package com.teamrl.app;
 //lead auth:JacobFarrow(20007972)
 
+import java.util.ArrayList;
+
 /**
  * userinfocomp is a POJO for user data
  * It essentially holds the state of the user
@@ -9,10 +11,7 @@ package com.teamrl.app;
 
 public class UserInfoComponent {
     //auth:HasanaynDad(22007018)
-    //sort out the password
-    //add to constructor
-    //generate encryption
-    //change password method
+
     private String surname;
     private String forename;
     private String fullname;
@@ -25,6 +24,8 @@ public class UserInfoComponent {
 
     private boolean adminFlag;
     private boolean superFlag;
+
+    private ArrayList<String> myActivities;
 
     private final String NAME_DELIMITER = " "; //we can change this to whatever...
 
@@ -41,6 +42,9 @@ public class UserInfoComponent {
         this.DOB = dob;
         this.startYear = startYear;
         this.endYear = endYear;
+        this.superFlag = staff();
+
+        this.myActivities = new ArrayList<>();
     }
 
     public UserInfoComponent(String surname, String forename, String uobNumber, String email, String password, String dob, String startYear, String endYear, boolean admin, boolean staff)
@@ -56,6 +60,7 @@ public class UserInfoComponent {
         this.endYear = endYear;
         this.adminFlag = admin;
         this.superFlag = staff;
+        this.myActivities = new ArrayList<>();
     }
 
     public String getSurname() {
@@ -78,9 +83,6 @@ public class UserInfoComponent {
         return fullname;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
-    }
 
     public String getUobNumber() {
         return uobNumber;
@@ -159,6 +161,7 @@ public class UserInfoComponent {
                 ", \"endYear\":" + String.format("\"%s\"", endYear) +
                 ", \"adminFlag\":" + String.format("\"%s\"", adminFlag) +
                 ", \"superFlag\":" + String.format("\"%s\"", superFlag) +
+                ", \"myActivities\":" + String.format("\"%s\"", myActivities) +
                 "}";
     }
 
@@ -175,7 +178,21 @@ public class UserInfoComponent {
                 "," + endYear;
     }
 
+    private boolean staff(){
+        if(this.uobNumber.substring(0,3).equals("900") && (this.endYear.equals("") || this.endYear.isEmpty())){
+            return true;
+        }
+        return false;
+    }
 
+
+    public ArrayList<String> getMyActivities() {
+        return myActivities;
+    }
+
+    public void setMyActivities(ArrayList<String> myActivities) {
+        this.myActivities = myActivities;
+    }
 }
 
 //Comment your name under this here if you familiarized yourself with the codebase the first time Jacob asked:

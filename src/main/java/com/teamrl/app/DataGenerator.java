@@ -122,6 +122,11 @@ public class DataGenerator {
                     //user is not a duplicate
                     userList.add(u);
                 }
+                for(int j=0; j<4;j++){
+                    if(random.nextInt(5)==0){
+                        u.addActivity(ACTIVITY_NAMES[random.nextInt(ACTIVITY_NAMES.length-1)]);
+                    }
+                }
             }
             //default sort the list by surname
             userList.sort(new BeanComparator("surname"));
@@ -250,7 +255,7 @@ public class DataGenerator {
             for(int i = 0; i<loopLength; i++)
             {
 
-                int x = random.nextInt(10)+1;
+                int x = random.nextInt(10);
                 s+= Integer.toString(x);
             }
 

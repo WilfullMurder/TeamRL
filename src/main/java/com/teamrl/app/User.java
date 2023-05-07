@@ -6,15 +6,9 @@ import java.util.ArrayList;
 
 public class User {
     //auth:HasanaynDad(22007018)
-
-    //sort out methods
-    //login //logout
-    //sign up //join activity
-    //Leave activity //view activity
-
     private UserInfoComponent myInfo;
 
-    private ArrayList<String> myActivities;
+
     private Admin admin;
     private SuperUser superUser;
 
@@ -66,7 +60,7 @@ public class User {
             //ReadComponent call
             //this.admin=new Admin();
         }
-        if (staff && checkForStaff(uobNumber, endYear)) {
+        if (staff) {
             //read super from file
             //search by own name? uob?
             //ReadComponent call
@@ -81,8 +75,32 @@ public class User {
      * @param userInfoComponent ~ the component of information belonging to this user
      */
     public User(UserInfoComponent userInfoComponent) {
+
         this.myInfo = userInfoComponent;
+        if(this.myInfo.isAdminFlag()){
+
+            //@TODO: ReadComponent.getSingleAdmin
+            ArrayList<Admin> admins = ReadComponent.readAdminDataFromJSON(FileComponent.ADMIN_FILENAME, FileComponent.MAIN_FOLDER);
+            for(int i =0; i < admins.size(); i++){
+                if(admins.get(i).getMyName().equals(this.myInfo.getFullname())){
+                    this.admin = admins.get(i);
+                }
+            }
+        }
+        else if(this.myInfo.isSuperFlag()){
+            //@TODO: ReadComponent.getSingleSuper
+            ArrayList<SuperUser> supers = ReadComponent.readSuperDataFromJSON(FileComponent.SUPER_FILENAME, FileComponent.MAIN_FOLDER);
+            for(int i =0; i < supers.size(); i++){
+                if(supers.get(i).getMyUoB().equals(this.myInfo.getUobNumber())){
+                    this.superUser = supers.get(i);
+                }
+            }
+        }
     }
+
+    /**
+     * GETTERS & SETTERS
+     */
 
     public UserInfoComponent getMyInfo() {
         return myInfo;
@@ -97,7 +115,6 @@ public class User {
     public String getForename(){return getMyInfo().getForename();}
     public void setForename(String s){getMyInfo().setForename(s);}
     public String getFullname(){return getMyInfo().getFullname();}
-    public void setFullname(String s){getMyInfo().setFullname(s);}
     public String getUobNumber(){return getMyInfo().getUobNumber();}
     public void setUobNumber(String s){getMyInfo().setUobNumber(s);}
     public String getEmail(){return getMyInfo().getEmail();}
@@ -115,11 +132,21 @@ public class User {
     public boolean isSuperFlag(){return getMyInfo().isSuperFlag();}
     public void setSuperFlag(boolean f){getMyInfo().setSuperFlag(f);}
     public ArrayList<String> getMyActivities() {
-        return myActivities;
+        return getMyInfo().getMyActivities();
     }
 
     public void setMyActivities(ArrayList<String> myActivities) {
-        this.myActivities = myActivities;
+        getMyInfo().setMyActivities(myActivities);
+    }
+    public void addActivity(String act){
+        if(getMyInfo().getMyActivities() == null){getMyInfo().setMyActivities(new ArrayList<>());}
+        getMyInfo().getMyActivities().add(act);
+        if(getMyInfo().getMyActivities().size() > 1){
+        }
+
+    }
+    public void removeActivity(String act){
+        getMyInfo().getMyActivities().remove(act);
     }
     public Admin getAdmin() {
         return admin;
@@ -138,22 +165,11 @@ public class User {
     }
 
 
-
-    //we might want to get rid of this check
-    //and/or write a flag to file
-    private boolean checkForStaff(String ub, String ey) {
-        String s = ub.substring(0, 2);
-        if (s.equals("900") && ey.equals("")) {
-            return true;
-        }
-        return false;
-    }
-
-
     @Override
     public String toString() {
         //needs password adding in after hash
         return this.myInfo.toString();
+
     }
 
 

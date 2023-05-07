@@ -76,6 +76,16 @@ public class WriteComponent {
         }
     }
 
+    public static void updateUser(UserInfoComponent uic, ArrayList<User> data){
+       ArrayList<User> newData = data;
+        for(int i =0; i < data.size(); i++){
+            if(uic.getUobNumber().equals(data.get(i).getUobNumber())){
+                newData.get(i).setMyInfo(uic);
+            }
+        }
+        writeUserDataToJSONPretty(FileComponent.USER_FILENAME, FileComponent.MAIN_FOLDER, newData);
+    }
+
     /**
      *
      * @param filename name of target file

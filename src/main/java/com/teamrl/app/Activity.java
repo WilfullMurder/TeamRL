@@ -17,6 +17,9 @@ public class Activity {
     //tracking activities/execs is something we need to discuss
     private ArrayList<String> execsList;
 
+    //@TODO: deal with an img uri/url for the activity
+    private String imgURI;
+
     public Activity(){}
 
     public Activity(String nom, ArrayList<String> desc,String contact, String loc, String cps, String cpy, ArrayList<String> links){

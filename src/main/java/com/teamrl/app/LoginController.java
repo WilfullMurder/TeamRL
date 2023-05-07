@@ -1,5 +1,5 @@
 package com.teamrl.app;
-
+//lead auth:JacobFarrow(20007972)
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,8 +17,11 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 
+import static com.teamrl.app.HelloApplication.currentSession;
 
+//@TODO: add exit button?
 public class LoginController {
+//auth:JacobFarrow(20007972)
     @FXML
     private ImageView loginBGImageView;
     @FXML //I feel like there is an email field that can do checks for valid emails?
@@ -36,22 +39,30 @@ public class LoginController {
     }
     public void onLoginButtonClick(ActionEvent actionEvent) {
 
-
         if(!emptyField()){
             //grab the data
             String mail = loginEmailTextField.getText();
             String pass = loginPasswordField.getText();
 
-            //we need look-up by email to check pass
+            //we need look-up by email to check pass --> we could look up by UoB?
             User u = ReadComponent.findSingleUser(mail, FileComponent.USER_FILENAME, FileComponent.MAIN_FOLDER);
             if(u != null){
                 if(pass.equals(u.getPassword())){
-                    //we have user so login
-                    //@TODO: keep the user in some sort of session tracker for the profile page?
-                    Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-                    try {
-                        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home.fxml"));
-                        stage.setScene(new Scene(fxmlLoader.load(), ScreenComponent.SCREEN_WIDTH, ScreenComponent.SCREEN_HEIGHT));
+                    //we have user so redirect to home
+                    try{
+                        Node node=(Node) actionEvent.getSource();
+                        Stage stage = (Stage) node.getScene().getWindow();
+                        //@TODO: move this out into HelloApplication? --> static func for redirecting scenes?
+                        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home-2.fxml"));
+                        HomeController hc = new HomeController();
+
+                        /**track the current user**/
+                        currentSession.setSessionUser(u);
+
+                        fxmlLoader.setController(hc);
+                        stage.setScene(new Scene(fxmlLoader.load()));
+                        stage.show();
+
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
